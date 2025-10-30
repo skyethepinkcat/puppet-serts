@@ -21,7 +21,7 @@ formats, without compromising flexibility.
 Install the module from the Puppet Forge (not currently available):
 
 ```bash
-puppet module install skye-serts
+puppet module install skyejonke-serts
 ```
 
 Or add it to your Puppetfile:
@@ -29,15 +29,15 @@ Or add it to your Puppetfile:
 ### From Puppet Forge
 
 ```ruby
-mod 'skye-serts'
+mod 'skyejonke-serts'
 ```
 
 ### From Github
 
 ```Puppetfile
 mod 'serts',
-  :git => 'gogs@git.cs.umbc.edu:CSEE/puppet-modules/serts.git',
-  :ref => 'git@github.com:skyethepinkcat/puppet-serts.git'
+  :git => 'git@github.com:skyethepinkcat/puppet-serts.git',
+  :ref => 'production'
 
 ```
 
