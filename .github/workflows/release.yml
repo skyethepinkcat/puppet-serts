@@ -1,25 +1,26 @@
 ---
-# Stolen from https://github.com/voxpupuli/puppet-archive/blob/master/.github/workflows/release.yml
+# Managed by modulesync - DO NOT EDIT
+# https://voxpupuli.org/docs/updating-files-managed-with-modulesync/
 
 name: Release
 
 # yamllint disable-line rule:truthy
 on:
-    push:
-        tags:
-            - "*"
+  push:
+    tags:
+      - '*'
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
-    release:
-        name: Release
-        uses: voxpupuli/gha-puppet/.github/workflows/release.yml@v3
-        with:
-            allowed_owner: "skyethepinkcat"
-        secrets:
-            # Configure secrets here:
-            #  https://docs.github.com/en/actions/security-guides/encrypted-secrets
-            username: ${{ secrets.PUPPET_FORGE_USERNAME }}
-            api_key: ${{ secrets.PUPPET_FORGE_API_KEY }}
+  release:
+    name: Release
+    uses: voxpupuli/gha-puppet/.github/workflows/release.yml@v3
+    with:
+      allowed_owner: 'skyethepinkcat'
+    secrets:
+      # Configure secrets here:
+      #  https://docs.github.com/en/actions/security-guides/encrypted-secrets
+      username: ${{ secrets.PUPPET_FORGE_USERNAME }}
+      api_key: ${{ secrets.PUPPET_FORGE_API_KEY }}

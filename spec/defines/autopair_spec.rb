@@ -12,6 +12,7 @@ describe 'serts::autopair' do
 
       context 'with default parameters' do
         it { is_expected.to compile.with_all_deps }
+
         it { is_expected.to contain_letsencrypt__certonly('test.example.com') }
 
         it do
@@ -28,6 +29,7 @@ describe 'serts::autopair' do
         let(:params) { { ensure: 'absent' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('test.example.com').with(
             'ensure' => 'absent',
@@ -39,6 +41,7 @@ describe 'serts::autopair' do
         let(:params) { { fqdn: 'custom.example.com' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('custom.example.com').with(
             'domains' => ['custom.example.com'],
@@ -50,6 +53,7 @@ describe 'serts::autopair' do
         let(:params) { { alt_names: ['alt1.example.com', 'alt2.example.com'] } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('test.example.com').with(
             'domains' => ['test.example.com', 'alt1.example.com', 'alt2.example.com'],
@@ -61,6 +65,7 @@ describe 'serts::autopair' do
         let(:params) { { manage_cron: false } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('test.example.com').with(
             'manage_cron' => false,
@@ -79,6 +84,7 @@ describe 'serts::autopair' do
         let(:params) { { cron_output: 'log' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('test.example.com').with(
             'cron_output' => 'log',
@@ -97,6 +103,7 @@ describe 'serts::autopair' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('server.example.com').with(
             'domains' => ['server.example.com', 'www.example.com', 'mail.example.com'],
@@ -108,6 +115,7 @@ describe 'serts::autopair' do
         let(:title) { 'testhost' }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_letsencrypt__certonly('testhost.example.com').with(
             'domains' => ['testhost.example.com'],

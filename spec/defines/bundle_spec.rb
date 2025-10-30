@@ -35,6 +35,7 @@ describe 'serts::bundle' do
         let(:params) { { ensure: 'absent' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/ca-bundle.pem").with(
             'ensure' => 'absent',
@@ -46,6 +47,7 @@ describe 'serts::bundle' do
         let(:params) { { directory: '/custom/path' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file('/custom/path/ca-bundle.pem').with(
             'ensure' => 'file',
@@ -57,6 +59,7 @@ describe 'serts::bundle' do
         let(:params) { { certname: 'custom.example.com' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/ca-bundle.pem").with(
             'source' => '/etc/letsencrypt/live/custom.example.com/chain.pem',
@@ -73,6 +76,7 @@ describe 'serts::bundle' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/ca-bundle.pem").with(
             'owner' => 'nginx',
@@ -85,6 +89,7 @@ describe 'serts::bundle' do
         let(:params) { { mode: '0640' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/ca-bundle.pem").with(
             'mode' => '0640',
@@ -96,6 +101,7 @@ describe 'serts::bundle' do
         let(:params) { { components: ['file:///path/to/single/cert.pem'] } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/ca-bundle.pem").with(
             'ensure' => 'file',
@@ -134,6 +140,7 @@ describe 'serts::bundle' do
         let(:params) { { ca_bundle_name: 'custom-bundle.pem' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/custom-bundle.pem").with(
             'ensure' => 'file',

@@ -38,6 +38,7 @@ describe 'serts::key' do
         let(:params) { { ensure: 'absent' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
             'ensure' => 'absent',
@@ -49,6 +50,7 @@ describe 'serts::key' do
         let(:params) { { keyname: 'custom-key' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/custom-key.key.pem").with(
             'source' => '/etc/letsencrypt/live/test.example.com/privkey.pem',
@@ -65,6 +67,7 @@ describe 'serts::key' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
             'owner' => 'nginx',
@@ -77,6 +80,7 @@ describe 'serts::key' do
         let(:params) { { mode: '0640' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
             'mode' => '0640',
@@ -88,6 +92,7 @@ describe 'serts::key' do
         let(:params) { { mode: '0644' } }
 
         it { is_expected.to compile.with_all_deps }
+
         # The warning is issued but compilation should still succeed
         it do
           is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
@@ -100,6 +105,7 @@ describe 'serts::key' do
         let(:params) { { directory: '/custom/keys' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file('/custom/keys/test.example.com.key.pem').with(
             'ensure' => 'file',
@@ -111,6 +117,7 @@ describe 'serts::key' do
         let(:params) { { filename: 'custom-key.pem' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/custom-key.pem").with(
             'ensure' => 'file',
@@ -122,6 +129,7 @@ describe 'serts::key' do
         let(:params) { { exclude_filetype: true } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/test.example.com.key").with(
             'ensure' => 'file',
@@ -134,6 +142,7 @@ describe 'serts::key' do
         let(:params) { { server_hostname: true } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/server.key.pem").with(
             'ensure' => 'file',
@@ -151,6 +160,7 @@ describe 'serts::key' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/server.key").with(
             'ensure' => 'file',
@@ -163,6 +173,7 @@ describe 'serts::key' do
         let(:params) { { server_hostname: false } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/server.example.com.key.pem").with(
             'ensure' => 'file',
@@ -174,6 +185,7 @@ describe 'serts::key' do
         let(:title) { 'testhost' }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_key_dir}/testhost.key.pem").with(
             'source' => '/etc/letsencrypt/live/testhost.example.com/privkey.pem',

@@ -38,6 +38,7 @@ describe 'serts::cert' do
         let(:params) { { ensure: 'absent' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/test.example.com.crt.pem").with(
             'ensure' => 'absent',
@@ -49,6 +50,7 @@ describe 'serts::cert' do
         let(:params) { { fullchain_cert: true } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/test.example.com.crt.pem").with(
             'source' => '/etc/letsencrypt/live/test.example.com/fullchain.pem',
@@ -65,6 +67,7 @@ describe 'serts::cert' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/test.example.com.crt.pem").with(
             'owner' => 'nginx',
@@ -77,6 +80,7 @@ describe 'serts::cert' do
         let(:params) { { mode: '0640' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/test.example.com.crt.pem").with(
             'mode' => '0640',
@@ -88,6 +92,7 @@ describe 'serts::cert' do
         let(:params) { { directory: '/custom/certs' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file('/custom/certs/test.example.com.crt.pem').with(
             'ensure' => 'file',
@@ -99,6 +104,7 @@ describe 'serts::cert' do
         let(:params) { { filename: 'custom-cert.pem' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/custom-cert.pem").with(
             'ensure' => 'file',
@@ -110,6 +116,7 @@ describe 'serts::cert' do
         let(:params) { { exclude_filetype: true } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/test.example.com.crt").with(
             'ensure' => 'file',
@@ -122,6 +129,7 @@ describe 'serts::cert' do
         let(:params) { { server_hostname: true } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/server.crt.pem").with(
             'ensure' => 'file',
@@ -139,6 +147,7 @@ describe 'serts::cert' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/server.crt").with(
             'ensure' => 'file',
@@ -151,6 +160,7 @@ describe 'serts::cert' do
         let(:params) { { server_hostname: false } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/server.example.com.crt.pem").with(
             'ensure' => 'file',
@@ -162,6 +172,7 @@ describe 'serts::cert' do
         let(:title) { 'testhost' }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/testhost.example.com.crt.pem").with(
             'source' => '/etc/letsencrypt/live/testhost.example.com/cert.pem',
@@ -173,6 +184,7 @@ describe 'serts::cert' do
         let(:params) { { certname: 'custom.example.com' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_file("#{expected_cert_dir}/custom.example.com.crt.pem").with(
             'source' => '/etc/letsencrypt/live/custom.example.com/cert.pem',

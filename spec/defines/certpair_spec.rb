@@ -99,6 +99,7 @@ describe 'serts::certpair' do
         let(:params) { { fullchain_cert: true } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__cert('test.example.com').with(
             'fullchain_cert' => true,
@@ -110,6 +111,7 @@ describe 'serts::certpair' do
         let(:params) { { alt_names: ['alt1.example.com', 'alt2.example.com'] } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__autopair('test.example.com').with(
             'alt_names' => ['alt1.example.com', 'alt2.example.com'],
@@ -238,6 +240,7 @@ describe 'serts::certpair' do
         let(:params) { { certname: 'custom.example.com' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__autopair('custom.example.com').with(
             'certname' => 'test.example.com',

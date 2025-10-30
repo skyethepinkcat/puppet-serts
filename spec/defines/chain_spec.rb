@@ -43,6 +43,7 @@ describe 'serts::chain' do
         let(:params) { { ensure: 'absent' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__bundle('ca-chain.pem').with(
             'ensure' => 'absent',
@@ -54,6 +55,7 @@ describe 'serts::chain' do
         let(:params) { { filename: 'custom-chain.pem' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__bundle('custom-chain.pem').with(
             'ca_bundle_name' => 'custom-chain.pem',
@@ -70,6 +72,7 @@ describe 'serts::chain' do
         end
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__bundle('ca-chain.pem').with(
             'owner' => 'nginx',
@@ -82,6 +85,7 @@ describe 'serts::chain' do
         let(:params) { { mode: '0640' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__bundle('ca-chain.pem').with(
             'mode' => '0640',
@@ -93,6 +97,7 @@ describe 'serts::chain' do
         let(:params) { { certname: 'custom.example.com' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__bundle('ca-chain.pem').with(
             'certname' => 'custom.example.com',
@@ -104,6 +109,7 @@ describe 'serts::chain' do
         let(:params) { { directory: '/custom/certs' } }
 
         it { is_expected.to compile.with_all_deps }
+
         it do
           is_expected.to contain_serts__bundle('ca-chain.pem').with(
             'directory' => '/custom/certs',
