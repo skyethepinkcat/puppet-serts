@@ -4,14 +4,15 @@
   main_branches: [ 'production' ]
 
 .rubocop.yml:
-  Layout/LineLength:
-    Max: 140
-  Style/WordArray:
-    EnforcedStyle: brackets
-  Style/TrailingCommaInArguments:
-    EnforcedStyleForMultiline: diff_comma
-  Lint/RedundantDirGlobSort:
-    Enabled: false
+  extra:
+    Layout/LineLength:
+      Max: 140
+    Style/WordArray:
+      EnforcedStyle: brackets
+    Style/TrailingCommaInArguments:
+      EnforcedStyleForMultiline: diff_comma
+    Lint/RedundantDirGlobSort:
+      Enabled: false
 
 .puppet-lint.rc:
   disabled_lint_checks:
