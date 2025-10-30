@@ -10,6 +10,7 @@ class serts (
   Array[Stdlib::Host] $alt_names = [],
   Hash $letsencrypt_config = {},
   Boolean $manage_directories = true,
+  Boolean $link_directories = false,
   Stdlib::AbsolutePath $cert_directory = '/etc/ssl/certs',
   Stdlib::AbsolutePath $key_directory = '/etc/ssl/private',
   Stdlib::AbsolutePath $letsencrypt_directory = '/etc/letsencrypt',
@@ -31,6 +32,20 @@ class serts (
       owner  => 'root',
       group  => 'root',
       mode   => '0700',
+    }
+    if $link_directories {
+      if $cert_directory != '/etc/ssl/certs' {
+        file { '/etc/ssl/certs':
+          ensure => 'link',
+          target => $cert_directory,
+        }
+      }
+      if $key_directory != '/etc/ssl/private' {
+        file { '/etc/ssl/private':
+          ensure => 'link',
+          target => $key_directory,
+        }
+      }
     }
   }
   class { 'letsencrypt':
