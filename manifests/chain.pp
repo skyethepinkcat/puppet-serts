@@ -13,7 +13,7 @@ define serts::chain (
   String $group = 'root',
   Stdlib::Filemode $mode = '0644',
   String $certname = $facts['networking']['fqdn'],
-  Stdlib::AbsolutePath $directory = $serts::cert_directory,
+  Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {
   require serts
   serts::bundle { $filename:

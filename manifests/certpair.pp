@@ -46,13 +46,26 @@ define serts::certpair (
   Stdlib::Filemode $key_mode = '0600',
   Optional[String] $cert_filename = undef,
   Optional[String] $key_filename = undef,
-  Stdlib::AbsolutePath $cert_directory = $serts::cert_directory,
-  Stdlib::AbsolutePath $key_directory = $serts::key_directory,
+  Optional[Stdlib::AbsolutePath] $cert_directory = undef,
+  Optional[Stdlib::AbsolutePath] $key_directory = undef,
   Boolean $ignore_autopair_warning = false,
   Boolean $include_chain = false,
   String $certname = $fqdn,
 ) {
   require serts
+
+  # Determine real directories
+
+  $real_cert_directory = $cert_directory ? {
+    undef   => $serts::cert_directory,
+    default => $cert_directory,
+  }
+
+  $real_key_directory = $key_directory ? {
+    undef   => $serts::key_directory,
+    default => $key_directory,
+  }
+
   if (!defined(Serts::Autopair[$certname])) {
     serts::autopair { $certname:
       ensure    => $ensure,
@@ -69,7 +82,7 @@ define serts::certpair (
     owner            => $owner,
     group            => $group,
     filename         => $cert_filename,
-    directory        => $cert_directory,
+    directory        => $real_cert_directory,
     certname         => $certname,
     exclude_filetype => $exclude_filetype,
     server_hostname  => $server_hostname,
@@ -83,7 +96,7 @@ define serts::certpair (
     owner            => $owner,
     group            => $group,
     filename         => $key_filename,
-    directory        => $key_directory,
+    directory        => $real_key_directory,
     exclude_filetype => $exclude_filetype,
     server_hostname  => $server_hostname,
     mode             => $key_mode,
@@ -94,9 +107,9 @@ define serts::certpair (
       ensure    => $ensure,
       filename  => 'ca_bundle.pem',
       certname  => $certname,
-      directory => $cert_directory ? {
-        undef   => $serts::cert_directory,
-        default => $cert_directory,
+      directory => $real_cert_directory ? {
+        undef   => $serts::real_cert_directory,
+        default => $real_cert_directory,
       },
       owner     => $owner,
       group     => $group,

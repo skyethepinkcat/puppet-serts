@@ -22,6 +22,7 @@ define serts::keychain (
   String $owner = 'root',
   String $group = 'root',
   String $fqdn = ($title =~ /[.]/) ? { true => $title, false => "${title}.${facts['networking']['domain']}" },
+  String $certname = $fqdn,
   Boolean $fullchain_cert = false,
   Array[Stdlib::Host] $alt_names = [],
   Boolean $exclude_filetype = false,
@@ -31,11 +32,15 @@ define serts::keychain (
   },
   Boolean $server_hostname = true,
   Stdlib::Filemode $mode = '0600',
-  Stdlib::AbsolutePath $directory = $serts::cert_directory,
-  String $certname = $fqdn,
   Boolean $key_first = true,
+  Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {
   require serts
+
+  $real_directory = $directory ? {
+    undef   => $serts::cert_directory,
+    default => $directory,
+  }
 
   if (!defined(Serts::Autopair[$certname])) {
     serts::autopair { $certname:
@@ -67,6 +72,6 @@ define serts::keychain (
         "${serts::letsencrypt_directory}/live/${certname}/privkey.pem",
       ],
     },
-    directory      => $directory,
+    directory      => $real_directory,
   }
 }
