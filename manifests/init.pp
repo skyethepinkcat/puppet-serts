@@ -13,6 +13,12 @@ class serts (
   Boolean $link_directories = false,
   Stdlib::AbsolutePath $cert_directory = '/etc/ssl/certs',
   Stdlib::AbsolutePath $key_directory = '/etc/ssl/private',
+  String $cert_directory_owner = 'root',
+  String $cert_directory_group = 'root',
+  String $key_directory_owner = 'root',
+  String $key_directory_group = 'root',
+  String $cert_directory_mode = '0755',
+  String $key_directory_mode = '0711',
   Stdlib::AbsolutePath $letsencrypt_directory = '/etc/letsencrypt',
 ) {
   # Enforce ordering of resources.
@@ -23,15 +29,15 @@ class serts (
   if $manage_directories {
     file { $cert_directory:
       ensure => 'directory',
-      owner  => 'root',
-      group  => 'root',
-      mode   => '0755',
+      owner  => $cert_directory_owner,
+      group  => $cert_directory_group,
+      mode   => $cert_directory_mode,
     }
     file { $key_directory:
       ensure => 'directory',
-      owner  => 'root',
-      group  => 'root',
-      mode   => '0700',
+      owner  => $key_directory_owner,
+      group  => $key_directory_group,
+      mode   => $key_directory_mode,
     }
     if $link_directories {
       if $cert_directory != '/etc/ssl/certs' {
