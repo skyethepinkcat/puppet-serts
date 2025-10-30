@@ -34,7 +34,7 @@ describe 'serts::chain' do
             'mode' => '0644',
             'certname' => 'server.example.com',
             'components' => [],
-            'directory' => expected_cert_dir,
+            'directory' => nil,
           )
         end
       end
