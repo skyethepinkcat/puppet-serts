@@ -19,20 +19,7 @@ jobs:
 
             - name: Gemfile Dependencies
               run: pdk bundle install
-            - name: check git binary
-              run: which git
 
-<<<<<<< HEAD
-            #  - name: Cache dependencies
-            #    uses: actions/cache@v3
-            #    with:
-            #        path: |
-            #            vendor/
-            #            .bundle/
-            #        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-            #        restore-keys: |
-            #            ${{ runner.os }}-gems-
-=======
             - name: Cache dependencies
               uses: actions/cache@v3
               with:
@@ -42,11 +29,15 @@ jobs:
                   key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-gems-
->>>>>>> parent of ac767b0 (debug(workflow): don't cache in hopes that will fix it somehow)
 
             - name: Generate reference
               run: pdk bundle exec rake strings:generate:reference
 
+            - name: Generate reference
+              run: pdk bundle exec rake strings:generate:reference
+
+            - name: Manually add safe directory
+              run: git config --global --add safe.directory /__w/puppet-serts/puppet-serts
             - name: Commit and Push changes
               uses: EndBug/add-and-commit@v9
               with:
