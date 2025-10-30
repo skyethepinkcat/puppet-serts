@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'certs' do
+describe 'csee_certs' do
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
