@@ -1,38 +1,40 @@
 name: Update GitHub Pages
 
 on:
-  push:
-    branches: [ production ]
+    push:
+        branches: [production]
 
 jobs:
-  update_gh_pages:
-    runs-on: ubuntu-latest
-    container:
-      image: docker.io/puppet/pdk:latest
+    update_gh_pages:
+        runs-on: ubuntu-latest
+        container:
+            image: docker.io/puppet/pdk:latest
 
-    env:
-      PDK_DISABLE_ANALYTICS: 'true'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Gemfile Dependencies
-        run: pdk bundle install
-
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: |
-            vendor/
-            .bundle/
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
-      - name: debug run ls before
-        run: ls -alR .
-      - name: Update GitHub Pages
-        run: pdk bundle exec rake strings:gh_pages:update
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            PDK_DISABLE_ANALYTICS: "true"
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v5
+
+            - name: Gemfile Dependencies
+              run: pdk bundle install
+
+            - name: Cache dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      vendor/
+                      .bundle/
+                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-gems-
+
+            - name: check git status
+              run: git status
+            - name: check git config
+              run: git config --list
+            - name: Update GitHub Pages
+              run: pdk bundle exec rake strings:gh_pages:update
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
