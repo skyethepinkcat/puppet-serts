@@ -1,117 +1,84 @@
-# certs
+# serts
 
-Welcome to your new module. A short overview of the generated parts can be found
-in the [PDK documentation][1].
-
-The README template below provides a starting point with details about what
-information to include in your README.
-
-## Table of Contents
-
-1. [Description](#description)
-1. [Setup - The basics of getting started with certs](#setup)
-    * [What certs affects](#what-certs-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with certs](#beginning-with-certs)
-1. [Usage - Configuration options and additional functionality](#usage)
-1. [Limitations - OS compatibility, etc.](#limitations)
-1. [Development - Guide for contributing to the module](#development)
+A Puppet module to simplify SSL certificate management using Let's Encrypt. This module provides convenient defined types and classes for managing SSL certificates, private keys, certificate chains, and bundles. Opinionated by default, but very flexible with parameters.
 
 ## Description
 
-Briefly tell users why they might want to use your module. Explain what your
-module does and what kind of problems users can solve with it.
+The `serts` module adds abstraction over the `puppet/letsencrypt` module to simplify the placement of generated certificates in various
+formats, without compromising flexibility.
 
-This should be a fairly short description helps the user decide if your module
-is what they want.
+## Requirements
 
-## Setup
+- Puppet 7.0 or higher
+- puppetlabs/stdlib (>= 9.0.0)
+- puppet/letsencrypt (>= 12.0.0)
+- puppetlabs/inifile (>= 2.5.0)
+- puppet/epel (>= 3.0.1)
+- puppet/concat (>= 6.0.0)
 
-### What certs affects **OPTIONAL**
+## Installation
 
-If it's obvious what your module touches, you can skip this section. For
-example, folks can probably figure out that your mysql_instance module affects
-their MySQL instances.
+Install the module from the Puppet Forge (not currently available):
 
-If there's more that they should know about, though, this is the place to
-mention:
-
-* Files, packages, services, or operations that the module will alter, impact,
-  or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled,
-another module, etc.), mention it here.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you might want to include an additional "Upgrading" section here.
-
-### Beginning with certs
-
-The very basic steps needed for a user to get the module up and running. This
-can include setup steps, if necessary, or it can be an example of the most basic
-use of the module.
-
-## Usage
-
-Include usage examples for common use cases in the **Usage** section. Show your
-users how to use your module to solve problems, and be sure to include code
-examples. Include three to five examples of the most important or common tasks a
-user can accomplish with your module. Show users how to accomplish more complex
-tasks that involve different types, classes, and functions working in tandem.
-
-## Reference
-
-This section is deprecated. Instead, add reference information to your code as
-Puppet Strings comments, and then use Strings to generate a REFERENCE.md in your
-module. For details on how to add code comments and generate documentation with
-Strings, see the [Puppet Strings documentation][2] and [style guide][3].
-
-If you aren't ready to use Strings yet, manually create a REFERENCE.md in the
-root of your module directory and list out each of your module's classes,
-defined types, facts, functions, Puppet tasks, task plans, and resource types
-and providers, along with the parameters for each.
-
-For each element (class, defined type, function, and so on), list:
-
-* The data type, if applicable.
-* A description of what the element does.
-* Valid values, if the data type doesn't make it obvious.
-* Default value, if any.
-
-For example:
-
-```
-### `pet::cat`
-
-#### Parameters
-
-##### `meow`
-
-Enables vocalization in your cat. Valid options: 'string'.
-
-Default: 'medium-loud'.
+```bash
+puppet module install skye-serts
 ```
 
-## Limitations
+Or add it to your Puppetfile:
 
-In the Limitations section, list any incompatibilities, known issues, or other
-warnings.
+### From Puppet Forge
+
+```ruby
+mod 'skye-serts'
+```
+
+### From Github
+
+```Puppetfile
+mod 'serts',
+  :git => 'gogs@git.cs.umbc.edu:CSEE/puppet-modules/serts.git',
+  :ref => 'git@github.com:skyethepinkcat/puppet-serts.git'
+
+```
+
+## Quick Start
+
+Basic certificate management:
+
+```puppet
+include serts
+
+serts::certpair { 'example.com':
+  alt_names => ['www.example.com', 'api.example.com'],
+}
+```
+
+This will provision a Let's Encrypt certificate for `example.com` with the specified alternative names and place the certificate and private key in the appropriate system directories.
+
+## Documentation
+
+Documentation is available on [GitHub Pages](https://skyethepinkcat.github.io/puppet-serts/) or in [./REFERENCE.md].
 
 ## Development
 
-In the Development section, tell other users the ground rules for contributing
-to your project and how they should submit their work.
+This module is developed and maintained on GitHub. Contributions are welcome through pull requests.
 
-## Release Notes/Contributors/Etc. **Optional**
+### Testing
 
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You can also add any additional sections you feel are
-necessary or important to include here. Please use the `##` header.
+Run the test suite:
 
-[1]: https://puppet.com/docs/pdk/latest/pdk_generating_modules.html
-[2]: https://puppet.com/docs/puppet/latest/puppet_strings.html
-[3]: https://puppet.com/docs/puppet/latest/puppet_strings_style.html
+```bash
+pdk test unit
+```
+
+### Linting
+
+Check code style:
+
+```bash
+pdk validate
+```
+
+## License
+
+This module is licensed under the MIT License. See the LICENSE file for details.
