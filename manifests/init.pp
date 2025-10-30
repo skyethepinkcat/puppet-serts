@@ -20,6 +20,7 @@ class serts (
   String $cert_directory_mode = '0755',
   String $key_directory_mode = '0711',
   Stdlib::AbsolutePath $letsencrypt_directory = '/etc/letsencrypt',
+  Enum['suppress', 'log', 'none'] $cron_output = 'none',
 ) {
   # Enforce ordering of resources.
   Serts::Autopair <| |> ~> Serts::Cert <| |>

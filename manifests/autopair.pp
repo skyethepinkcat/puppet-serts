@@ -15,9 +15,14 @@ define serts::autopair (
   Array[Stdlib::Host] $alt_names = [],
   Boolean $manage_cron = true,
   String $certname = $fqdn,
-  Optional[Enum['suppress', 'log']] $cron_output = undef,
+  Optional[Enum['suppress', 'log', 'none']] $cron_output = undef,
 ) {
-  require serts, stdlib
+  require serts
+
+  $real_cron_output = $cron_output ? {
+    undef   => $serts::cron_output ? { 'none' => undef, default => $serts::cron_output },
+    default => $cron_output ? { 'none' => undef, default => $cron_output }
+  }
 
   $system_alt_names = $fqdn == $facts['networking']['fqdn'] ? {
     true  => $serts::alt_names,
@@ -29,7 +34,7 @@ define serts::autopair (
       ensure      => $ensure,
       domains     => [$fqdn] + $alt_names + $system_alt_names,
       manage_cron => $manage_cron, # Allows refreshing
-      cron_output => $cron_output,
+      cron_output => $real_cron_output,
     }
   }
 }
