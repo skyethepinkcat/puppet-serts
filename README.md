@@ -57,7 +57,7 @@ This will provision a Let's Encrypt certificate for `example.com` with the speci
 
 ## Documentation
 
-Documentation is available on [GitHub Pages](https://skyethepinkcat.github.io/puppet-serts/) or in [./REFERENCE.md].
+Detailed documentation for all classes, defined types, and parameters is available in the [REFERENCE.md](./REFERENCE.md) file, which is automatically generated from the code comments using Puppet Strings.
 
 ## Development
 
