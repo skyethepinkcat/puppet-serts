@@ -31,7 +31,7 @@ jobs:
                       ${{ runner.os }}-gems-
 
             - name: Generate reference
-              run: pdk bundle exec rake strings:reference:generate
+              run: pdk bundle exec rake strings:generate:reference
 
             - name: Commit and Push changes
               run: |
