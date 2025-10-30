@@ -17,6 +17,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Gemfile Dependencies
+        run: pdk bundle install
+
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -28,6 +31,6 @@ jobs:
             ${{ runner.os }}-gems-
 
       - name: Update GitHub Pages
-        run: rake strings:gh_pages:update
+        run: pdk bundle exec rake strings:gh_pages:update
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
