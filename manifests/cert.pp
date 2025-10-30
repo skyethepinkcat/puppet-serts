@@ -1,4 +1,4 @@
-# @summary Represents a certificate and its key. You might want to use ourcerts::certpair instead.
+# @summary Represents a certificate and its key. You might want to use serts::certpair instead.
 # @param ensure Whether the certificate and key should be present or absent.
 # @param title The name of the resource, which should be the fully qualified domain name (FQDN) for the cert.
 # @param owner The owner of the certificate and key files.
@@ -36,7 +36,7 @@ define serts::cert (
   }
 
   $real_directory = $directory ? {
-    undef   => $csee_certs::cert_directory,
+    undef   => $serts::cert_directory,
     default => $directory,
   }
 

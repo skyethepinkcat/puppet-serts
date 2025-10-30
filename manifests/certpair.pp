@@ -22,10 +22,10 @@
 # @param ignore_autopair_warning Whether to ignore a warning if a Serts::Autopair resource is already defined for this fqdn.
 #
 # @example Basic usage with default parameters
-#   ourcerts::certpair { 'myhost': }
+#   serts::certpair { 'myhost': }
 #
 # @example Specify custom owner and group
-#   ourcerts::certpair { 'myhost':
+#   serts::certpair { 'myhost':
 #     owner => 'appuser',
 #     group => 'appgroup',
 #   }
@@ -56,7 +56,7 @@ define serts::certpair (
     }
   } else {
     unless $ignore_autopair_warning {
-      warning("The Serts::Certpair ${fqdn} is set to use automatic certs, but an Ourcerts::Autopair resource is already defined for it. Consider letting this resource manage the certpair instead.")
+      warning("The Serts::Certpair ${fqdn} is set to use automatic certs, but a Serts::Autopair resource is already defined for it. Consider letting this resource manage the certpair instead.")
     }
   }
   serts::cert { $title:

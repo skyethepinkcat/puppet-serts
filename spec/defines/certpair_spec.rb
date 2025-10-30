@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe 'Certs::certpair' do
+describe 'serts::certpair' do
   let(:title) { 'namevar' }
   let(:params) do
     {}

@@ -1,4 +1,4 @@
-# @summary Represents a key. You might want to use ourcerts::certpair instead.
+# @summary Represents a key. You might want to use serts::certpair instead.
 # @param title The name of the resource, which should be the fully qualified domain name (FQDN) for the cert.
 # @param ensure Whether the key should be present or absent.
 # @param owner The owner of the key files.
