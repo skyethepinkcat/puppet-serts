@@ -22,6 +22,7 @@ jobs:
             - name: check git binary
               run: which git
 
+<<<<<<< HEAD
             #  - name: Cache dependencies
             #    uses: actions/cache@v3
             #    with:
@@ -31,6 +32,17 @@ jobs:
             #        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
             #        restore-keys: |
             #            ${{ runner.os }}-gems-
+=======
+            - name: Cache dependencies
+              uses: actions/cache@v3
+              with:
+                  path: |
+                      vendor/
+                      .bundle/
+                  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-gems-
+>>>>>>> parent of ac767b0 (debug(workflow): don't cache in hopes that will fix it somehow)
 
             - name: Generate reference
               run: pdk bundle exec rake strings:generate:reference
