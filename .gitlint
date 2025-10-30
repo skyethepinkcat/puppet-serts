@@ -102,7 +102,7 @@ contrib=contrib-title-conventional-commits
 # regex=[^@]+@foo.com
 
 [ignore-by-title]
-regex = ^modulesync(.*)
+regex = ^Update from voxpu(.*)
 ignore=all
 # Ignore certain rules for commits of which the title matches a regex
 # E.g. Match commit titles that start with "Release"
