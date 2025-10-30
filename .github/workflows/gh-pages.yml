@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Gemfile Dependencies
         run: pdk bundle install
@@ -30,6 +30,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
+      - name: debug run ls before
+        run: ls -alR .
       - name: Update GitHub Pages
         run: pdk bundle exec rake strings:gh_pages:update
         env:
