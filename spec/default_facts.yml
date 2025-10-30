@@ -6,4 +6,7 @@ networking:
   ip: "172.16.254.254"
   ip6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
   mac: "AA:AA:AA:AA:AA:AA"
+  hostname: "server.example.com"
+  fqdn: "server.example.com"
+  domain: "example.com"
 is_pe: false

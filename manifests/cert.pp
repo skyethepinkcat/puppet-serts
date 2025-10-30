@@ -12,13 +12,12 @@
 # @param mode The file mode for the certificate file.
 # @param fqdn The fully qualified domain name of the url the cert is for. By default, this is the title of the resource, 
 #   but if the title does not contain a dot, the system's domain will be appended.
-# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem. 
-# @param keyname The name of the key to use, which determines the name of the key file.  Defaults to the title of the resource.
-#   Note that this is not necessarily the same as the fqdn, and often is the hostname.
+# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+# @param certname The name of the letsencrypt certpair to use. By default, this is the same as the fqdn.
 define serts::cert (
   Enum['present', 'absent'] $ensure = 'present',
-  String $keyname = $title,
   String $fqdn = ($title =~ /[.]/) ? { true => $title, false => "${title}.${facts['networking']['domain']}" },
+  String $certname = $fqdn,
   String $owner = 'root',
   String $group = 'root',
   Boolean $exclude_filetype = false,
@@ -31,8 +30,8 @@ define serts::cert (
   require serts
 
   $source = $fullchain_cert ? {
-    true  => "${serts::letsencrypt_directory}/live/${fqdn}/fullchain.pem",
-    false => "${serts::letsencrypt_directory}/live/${fqdn}/cert.pem",
+    true  => "${serts::letsencrypt_directory}/live/${certname}/fullchain.pem",
+    false => "${serts::letsencrypt_directory}/live/${certname}/cert.pem",
   }
 
   $real_directory = $directory ? {
@@ -44,15 +43,15 @@ define serts::cert (
   # the system's hostname, use server.crt.pem.  Otherwise, use
   # <hostname>.crt.pem.
   if $filename == undef {
-    if ($facts['networking']['hostname'] == $keyname or $facts['networking']['fqdn'] == $keyname) and $server_hostname {
+    if ($facts['networking']['hostname'] == $certname or $facts['networking']['fqdn'] == $certname) and $server_hostname {
       $real_filename = $exclude_filetype ? {
         true    => 'server.crt',
         default => 'server.crt.pem',
       }
     } else {
       $real_filename = $exclude_filetype ? {
-        true    => "${keyname}.crt",
-        default => "${keyname}.crt.pem",
+        true    => "${certname}.crt",
+        default => "${certname}.crt.pem",
       }
     }
   } else {
@@ -66,7 +65,7 @@ define serts::cert (
     source => $source,
     path   => "${real_directory}/${real_filename}",
     links  => 'follow',
-    mode   => '0644',
+    mode   => $mode,
     owner  => $owner,
     group  => $group,
   }

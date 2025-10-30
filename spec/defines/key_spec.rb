@@ -3,13 +3,15 @@
 require 'spec_helper'
 
 describe 'serts::key' do
-  let(:title) { 'example.com' }
+  let(:title) { 'test.example.com' }
   let(:pre_condition) { 'include serts' }
 
   on_supported_os.each do |os, os_facts|
     context "on #{os}" do
       let(:facts) { os_facts }
-      let(:key_directory) do
+
+      # Set expected directories based on OS family
+      let(:expected_key_dir) do
         case os_facts[:os]['family']
         when 'RedHat'
           '/etc/pki/tls/private'
@@ -21,76 +23,13 @@ describe 'serts::key' do
       context 'with default parameters' do
         it { is_expected.to compile.with_all_deps }
 
-        it 'creates the key file with default filename' do
-          is_expected.to contain_file("#{key_directory}/example.com.key.pem").with(
-            ensure: 'file',
-            source: '/etc/letsencrypt/live/example.com/privkey.pem',
-            mode: '0600',
-            owner: 'root',
-            group: 'root',
-            links: 'follow',
-          )
-        end
-      end
-
-      context 'with custom directory' do
-        let(:params) { { directory: '/custom/key/path' } }
-
-        it 'creates key in custom directory' do
-          is_expected.to contain_file('/custom/key/path/example.com.key.pem')
-        end
-      end
-
-      context 'with custom filename' do
-        let(:params) { { filename: 'custom.key' } }
-
-        it 'uses custom filename' do
-          is_expected.to contain_file("#{key_directory}/custom.key")
-        end
-      end
-
-      context 'with exclude_filetype enabled' do
-        let(:params) { { exclude_filetype: true } }
-
-        it 'excludes file extension from filename' do
-          is_expected.to contain_file("#{key_directory}/example.com.key")
-        end
-      end
-
-      context 'with server hostname matching system hostname' do
-        let(:title) { 'server' }
-        let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
-
-        it 'uses server.key.pem as filename' do
-          is_expected.to contain_file("#{key_directory}/server.key.pem")
-        end
-
-        context 'with server_hostname disabled' do
-          let(:params) { { server_hostname: false } }
-
-          it 'uses hostname-based filename instead of server' do
-            is_expected.to contain_file("#{key_directory}/server.key.pem")
-          end
-        end
-      end
-
-      context 'with custom owner and group' do
-        let(:params) { { owner: 'nginx', group: 'nginx' } }
-
-        it 'sets custom ownership' do
-          is_expected.to contain_file("#{key_directory}/example.com.key.pem").with(
-            owner: 'nginx',
-            group: 'nginx',
-          )
-        end
-      end
-
-      context 'with custom mode' do
-        let(:params) { { mode: '0640' } }
-
-        it 'sets custom file mode' do
-          is_expected.to contain_file("#{key_directory}/example.com.key.pem").with(
-            mode: '0640',
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
+            'ensure' => 'file',
+            'source' => '/etc/letsencrypt/live/test.example.com/privkey.pem',
+            'owner' => 'root',
+            'group' => 'root',
+            'mode' => '0600',
           )
         end
       end
@@ -98,28 +37,146 @@ describe 'serts::key' do
       context 'with ensure absent' do
         let(:params) { { ensure: 'absent' } }
 
-        it 'removes the key file' do
-          is_expected.to contain_file("#{key_directory}/example.com.key.pem").with(
-            ensure: 'absent',
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
+            'ensure' => 'absent',
           )
         end
       end
 
-      context 'with unsafe file permissions' do
-        let(:params) { { mode: '0644' } }
+      context 'with custom keyname' do
+        let(:params) { { keyname: 'custom-key' } }
 
-        it 'shows a warning for unsafe permissions' do
-          is_expected.to compile
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/custom-key.key.pem").with(
+            'source' => '/etc/letsencrypt/live/test.example.com/privkey.pem',
+          )
         end
       end
 
-      context 'with title without domain and networking facts' do
-        let(:title) { 'myhost' }
-        let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+      context 'with custom owner and group' do
+        let(:params) do
+          {
+            owner: 'nginx',
+            group: 'nginx'
+          }
+        end
 
-        it 'appends domain to create FQDN' do
-          is_expected.to contain_file("#{key_directory}/myhost.key.pem").with(
-            source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
+            'owner' => 'nginx',
+            'group' => 'nginx',
+          )
+        end
+      end
+
+      context 'with custom mode' do
+        let(:params) { { mode: '0640' } }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
+            'mode' => '0640',
+          )
+        end
+      end
+
+      context 'with unsafe permissions' do
+        let(:params) { { mode: '0644' } }
+
+        it { is_expected.to compile.with_all_deps }
+        # The warning is issued but compilation should still succeed
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/test.example.com.key.pem").with(
+            'mode' => '0644',
+          )
+        end
+      end
+
+      context 'with custom directory' do
+        let(:params) { { directory: '/custom/keys' } }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file('/custom/keys/test.example.com.key.pem').with(
+            'ensure' => 'file',
+          )
+        end
+      end
+
+      context 'with custom filename' do
+        let(:params) { { filename: 'custom-key.pem' } }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/custom-key.pem").with(
+            'ensure' => 'file',
+          )
+        end
+      end
+
+      context 'with exclude_filetype true' do
+        let(:params) { { exclude_filetype: true } }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/test.example.com.key").with(
+            'ensure' => 'file',
+          )
+        end
+      end
+
+      context 'when title matches system hostname' do
+        let(:title) { 'server.example.com' }
+        let(:params) { { server_hostname: true } }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/server.key.pem").with(
+            'ensure' => 'file',
+          )
+        end
+      end
+
+      context 'when title matches system hostname with exclude_filetype' do
+        let(:title) { 'server.example.com' }
+        let(:params) do
+          {
+            server_hostname: true,
+            exclude_filetype: true
+          }
+        end
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/server.key").with(
+            'ensure' => 'file',
+          )
+        end
+      end
+
+      context 'with server_hostname false' do
+        let(:title) { 'server.example.com' }
+        let(:params) { { server_hostname: false } }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/server.example.com.key.pem").with(
+            'ensure' => 'file',
+          )
+        end
+      end
+
+      context 'when title has no dot (hostname only)' do
+        let(:title) { 'testhost' }
+
+        it { is_expected.to compile.with_all_deps }
+        it do
+          is_expected.to contain_file("#{expected_key_dir}/testhost.key.pem").with(
+            'source' => '/etc/letsencrypt/live/testhost.example.com/privkey.pem',
           )
         end
       end

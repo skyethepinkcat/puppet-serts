@@ -20,6 +20,7 @@
 #   the system's fqdn, additional alt names will be looked up from hiera.
 # @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
 # @param ignore_autopair_warning Whether to ignore a warning if a Serts::Autopair resource is already defined for this fqdn.
+# @param certname The name of the letsencrypt certpair to use. By default, this is the same as the fqdn.
 #
 # @example Basic usage with default parameters
 #   serts::certpair { 'myhost': }
@@ -46,17 +47,18 @@ define serts::certpair (
   Optional[Stdlib::AbsolutePath] $cert_directory = undef,
   Optional[Stdlib::AbsolutePath] $key_directory = undef,
   Boolean $ignore_autopair_warning = false,
+  String $certname = $fqdn,
 ) {
   require serts
-  if (!defined(Serts::Autopair[$fqdn])) {
-    serts::autopair { $fqdn:
+  if (!defined(Serts::Autopair[$certname])) {
+    serts::autopair { $certname:
       ensure    => $ensure,
       fqdn      => $fqdn,
       alt_names => $alt_names,
     }
   } else {
     unless $ignore_autopair_warning {
-      warning("The Serts::Certpair ${fqdn} is set to use automatic certs, but a Serts::Autopair resource is already defined for it. Consider letting this resource manage the certpair instead.")
+      warning("The Serts::Certpair ${certname} is set to use automatic certs, but a Serts::Autopair resource is already defined for it. Consider letting this resource manage the certpair instead.")
     }
   }
   serts::cert { $title:
@@ -65,6 +67,7 @@ define serts::certpair (
     group            => $group,
     filename         => $cert_filename,
     directory        => $cert_directory,
+    certname         => $certname,
     exclude_filetype => $exclude_filetype,
     server_hostname  => $server_hostname,
     mode             => $cert_mode,

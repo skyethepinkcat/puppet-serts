@@ -9,3 +9,4 @@ fixtures:
     inifile: "puppetlabs/inifile"
     cron_core: "puppetlabs/cron_core"
     yumrepo_core: "puppetlabs/yumrepo_core"
+    concat: "puppetlabs/concat"
