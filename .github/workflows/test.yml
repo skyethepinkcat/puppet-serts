@@ -35,14 +35,6 @@ jobs:
       - name: Run unit tests
         run: pdk test unit --verbose --format=junit:report.xml
 
-      - name: Publish test results
-        uses: dorny/test-reporter@v1
-        if: always()
-        with:
-          name: Unit Tests
-          path: report.xml
-          reporter: java-junit
-
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: failure()
