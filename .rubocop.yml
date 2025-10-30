@@ -4,3 +4,11 @@
 
 inherit_gem:
   voxpupuli-test: rubocop.yml
+Layout/LineLength:
+  Max: 140
+Style/WordArray:
+  EnforcedStyle: brackets
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: diff_comma
+Lint/RedundantDirGlobSort:
+  Enabled: false
