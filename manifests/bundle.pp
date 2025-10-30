@@ -26,7 +26,7 @@ define serts::bundle (
   }
 
   if $components == [] or $ensure == 'absent' {
-    Serts::Autopair <| |> ~> file { "${directory}/${ca_bundle_name}":
+    Serts::Autopair <| |> ~> file { "${real_directory}/${ca_bundle_name}":
       ensure => $ensure ? { 'present' => 'file', 'absent'  => absent, },
       source => "${$serts::letsencrypt_directory}/live/${certname}/chain.pem",
       path   => "${real_directory}/${ca_bundle_name}",
