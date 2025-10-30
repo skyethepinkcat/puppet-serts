@@ -33,7 +33,7 @@ jobs:
             ${{ runner.os }}-gems-
 
       - name: Run unit tests
-        run: pdk test unit --verbose --format=junit:report.xml
+        run: pdk test unit --format=junit:report.xml
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
