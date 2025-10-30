@@ -15,6 +15,7 @@ jobs:
 
         env:
             PDK_DISABLE_ANALYTICS: "true"
+            BUNDLE_PATH: "./vendor"
 
         steps:
             - name: Checkout code
