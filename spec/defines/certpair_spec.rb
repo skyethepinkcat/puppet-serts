@@ -32,7 +32,7 @@ describe 'serts::certpair' do
             'owner' => 'root',
             'group' => 'root',
             'fullchain_cert' => false,
-            'mode' => '0644',
+            'mode' => '0444',
           )
         end
 
@@ -41,7 +41,7 @@ describe 'serts::certpair' do
             'ensure' => 'present',
             'owner' => 'root',
             'group' => 'root',
-            'mode' => '0600',
+            'mode' => '0400',
           )
         end
       end

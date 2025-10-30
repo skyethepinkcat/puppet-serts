@@ -31,7 +31,7 @@ describe 'serts::chain' do
             'ca_bundle_name' => 'ca-chain.pem',
             'owner' => 'root',
             'group' => 'root',
-            'mode' => '0644',
+            'mode' => '0444',
             'certname' => 'server.example.com',
             'components' => [],
             'directory' => nil,

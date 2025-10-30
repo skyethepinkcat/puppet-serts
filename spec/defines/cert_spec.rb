@@ -29,7 +29,7 @@ describe 'serts::cert' do
             'source' => '/etc/letsencrypt/live/test.example.com/cert.pem',
             'owner' => 'root',
             'group' => 'root',
-            'mode' => '0644',
+            'mode' => '0444',
           )
         end
       end

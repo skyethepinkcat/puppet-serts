@@ -139,7 +139,7 @@ Data type: `String`
 
 
 
-Default value: `'0755'`
+Default value: `'0555'`
 
 ##### <a name="-serts--key_directory_mode"></a>`key_directory_mode`
 
@@ -147,7 +147,7 @@ Data type: `String`
 
 
 
-Default value: `'0711'`
+Default value: `'0511'`
 
 ##### <a name="-serts--cron_output"></a>`cron_output`
 
@@ -302,7 +302,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the CA bundle file.
 
-Default value: `'0644'`
+Default value: `'0444'`
 
 ##### <a name="-serts--bundle--certname"></a>`certname`
 
@@ -401,7 +401,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the certificate file.
 
-Default value: `'0644'`
+Default value: `'0444'`
 
 ##### <a name="-serts--cert--fqdn"></a>`fqdn`
 
@@ -557,7 +557,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the certificate file.
 
-Default value: `'0644'`
+Default value: `'0444'`
 
 ##### <a name="-serts--certpair--key_mode"></a>`key_mode`
 
@@ -565,7 +565,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the key file.
 
-Default value: `'0600'`
+Default value: `'0400'`
 
 ##### <a name="-serts--certpair--fqdn"></a>`fqdn`
 
@@ -680,7 +680,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the CA bundle file.
 
-Default value: `'0644'`
+Default value: `'0444'`
 
 ##### <a name="-serts--chain--certname"></a>`certname`
 
@@ -778,7 +778,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the key file.
 
-Default value: `'0600'`
+Default value: `'0400'`
 
 ##### <a name="-serts--key--fqdn"></a>`fqdn`
 
@@ -861,7 +861,7 @@ Data type: `Stdlib::Filemode`
 
 The file mode for the keychain file.
 
-Default value: `'0600'`
+Default value: `'0400'`
 
 ##### <a name="-serts--keychain--fqdn"></a>`fqdn`
 

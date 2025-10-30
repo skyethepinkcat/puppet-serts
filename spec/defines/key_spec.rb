@@ -29,7 +29,7 @@ describe 'serts::key' do
             'source' => '/etc/letsencrypt/live/test.example.com/privkey.pem',
             'owner' => 'root',
             'group' => 'root',
-            'mode' => '0600',
+            'mode' => '0400',
           )
         end
       end
