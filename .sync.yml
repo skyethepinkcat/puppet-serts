@@ -3,7 +3,7 @@
   acceptance_tests: true
   main_branches: [ 'production' ]
 
-.rubocop.yaml:
+.rubocop.yml:
   Layout/LineLength:
     Max: 140
   Style/WordArray:
