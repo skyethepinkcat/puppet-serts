@@ -52,7 +52,7 @@ describe 'serts' do
             'ensure' => 'directory',
             'owner' => 'root',
             'group' => 'root',
-            'mode' => '0700',
+            'mode' => '0711',
           )
         end
       end
@@ -81,7 +81,7 @@ describe 'serts' do
             'ensure' => 'directory',
             'owner' => 'root',
             'group' => 'root',
-            'mode' => '0700',
+            'mode' => '0711',
           )
         end
       end
