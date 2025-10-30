@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branches: [ "*" ]
+    branches: ["*"]
   pull_request:
-    branches: [ "*" ]
+    branches: ["*"]
 
 jobs:
   unit_tests:
@@ -13,11 +13,19 @@ jobs:
       image: docker.io/puppet/pdk:latest
 
     env:
-      PDK_DISABLE_ANALYTICS: 'true'
+      PDK_DISABLE_ANALYTICS: "true"
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Install gitlint
+        run: |
+          apt-get update
+          apt-get install -y gitlint
+
+      - name: gitlint --debug
+        run: gitlint --debug
+        continue-on-error: ${{ github.event_name	== 'pull_request' }} # Don't enforce gitlint in PRs
 
       - name: Check PDK version
         run: pdk --version
@@ -48,7 +56,7 @@ jobs:
       image: docker.io/puppet/pdk:latest
 
     env:
-      PDK_DISABLE_ANALYTICS: 'true'
+      PDK_DISABLE_ANALYTICS: "true"
 
     steps:
       - name: Checkout code
