@@ -10,7 +10,6 @@ on:
   push:
     branches:
       - production
-      - modulesync
 
 concurrency:
   group: ${{ github.ref_name }}
