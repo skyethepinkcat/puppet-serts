@@ -17,8 +17,8 @@ class serts (
   String $cert_directory_group = 'root',
   String $key_directory_owner = 'root',
   String $key_directory_group = 'root',
-  String $cert_directory_mode = '0755',
-  String $key_directory_mode = '0711',
+  String $cert_directory_mode = '0555',
+  String $key_directory_mode = '0511',
   Stdlib::AbsolutePath $letsencrypt_directory = '/etc/letsencrypt',
   Enum['suppress', 'log', 'none'] $cron_output = 'none',
 ) {

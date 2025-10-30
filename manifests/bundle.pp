@@ -13,7 +13,7 @@ define serts::bundle (
   String $ca_bundle_name = $title,
   String $owner = 'root',
   String $group = 'root',
-  Stdlib::Filemode $mode = '0644',
+  Stdlib::Filemode $mode = '0444',
   String $certname = $facts['networking']['fqdn'],
   Array[Stdlib::Filesource] $components = [],
   Optional[Stdlib::AbsolutePath] $directory = undef,

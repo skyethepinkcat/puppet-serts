@@ -11,7 +11,7 @@ define serts::chain (
   String $filename = $title,
   String $owner = 'root',
   String $group = 'root',
-  Stdlib::Filemode $mode = '0644',
+  Stdlib::Filemode $mode = '0444',
   String $certname = $facts['networking']['fqdn'],
   Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {

@@ -23,7 +23,7 @@ define serts::cert (
   Boolean $exclude_filetype = false,
   Boolean $server_hostname = true,
   Boolean $fullchain_cert = false,
-  Stdlib::Filemode $mode = '0644',
+  Stdlib::Filemode $mode = '0444',
   Optional[String] $filename = undef,
   Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {

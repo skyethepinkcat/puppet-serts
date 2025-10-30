@@ -31,7 +31,7 @@ define serts::keychain (
     default => "${fqdn}.keychain.pem",
   },
   Boolean $server_hostname = true,
-  Stdlib::Filemode $mode = '0600',
+  Stdlib::Filemode $mode = '0400',
   Boolean $key_first = true,
   Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {

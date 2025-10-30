@@ -20,7 +20,7 @@ define serts::key (
   String $group = 'root',
   Boolean $exclude_filetype = false,
   Boolean $server_hostname = true,
-  Stdlib::Filemode $mode = '0600',
+  Stdlib::Filemode $mode = '0400',
   Optional[String] $filename = undef,
   Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {
