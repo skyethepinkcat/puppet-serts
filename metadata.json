@@ -4,7 +4,7 @@
   "author": "Skye Jonke",
   "summary": "A module to simplify SSL certs.",
   "license": "MIT",
-  "source": "git@github.com/skyethepinkcat/puppet-serts.git",
+  "source": "https://github.com/skyethepinkcat/puppet-serts.git",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
