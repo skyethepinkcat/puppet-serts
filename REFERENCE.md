@@ -178,7 +178,7 @@ The following parameters are available in the `serts::autopair` defined type:
 
 ##### <a name="-serts--autopair--title"></a>`title`
 
-UWAAAA The name of the resource, which should be the fully qualified domain name (FQDN) for the cert.
+The name of the resource, which should be the fully qualified domain name (FQDN) for the cert.
 
 ##### <a name="-serts--autopair--ensure"></a>`ensure`
 
