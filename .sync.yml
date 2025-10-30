@@ -10,7 +10,7 @@
     Style/WordArray:
       EnforcedStyle: brackets
     Style/TrailingCommaInArguments:
-      EnforcedStyleForMultiline: diff_comma
+      EnforcedStyleForMultiline: comma
     Lint/RedundantDirGlobSort:
       Enabled: false
 
