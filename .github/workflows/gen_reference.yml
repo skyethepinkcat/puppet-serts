@@ -33,11 +33,9 @@ jobs:
             - name: Generate reference
               run: pdk bundle exec rake strings:generate:reference
 
-            - name: Generate reference
-              run: pdk bundle exec rake strings:generate:reference
-
             - name: Manually add safe directory
               run: git config --global --add safe.directory /__w/puppet-serts/puppet-serts
+
             - name: Commit and Push changes
               uses: EndBug/add-and-commit@v9
               with:
