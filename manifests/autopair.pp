@@ -15,9 +15,9 @@ define serts::autopair (
   String $domain = $facts['networking']['domain'],
   Array[Stdlib::Host] $alt_names = [],
   Boolean $manage_cron = true,
-  String $cron_output = 'suppress',
+  Optional[Enum['suppress', 'log']] $cron_output = undef,
 ) {
-  require serts
+  require serts, stdlib
 
   $system_alt_names = $fqdn == $facts['networking']['fqdn'] ? {
     true  => $serts::alt_names,

@@ -1,0 +1,1543 @@
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffac3767c8 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on centos-9-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffac2aadd0 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on redhat-8-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffaa4e44e0 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on redhat-9-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffaa634750 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on rocky-8-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9b3c460 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on almalinux-8-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9c02a98 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on debian-11-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9ab5960 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on debian-12-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffaa6b74e8 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on ubuntu-20.04-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9d655c0 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on ubuntu-22.04-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/autopair_spec.rb:121: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9d96eb8 @exp_resource_type="letsencrypt__certonly", @args=["example.com"], @block=nil, @referenced_type="Letsencrypt::Certonly", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::autopair on fedora-40-x86_64 when letsencrypt certonly resource already exists does not create duplicate letsencrypt certonly resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate letsencrypt certonly resource' do
+            is_expected.to contain_letsencrypt__certonly('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on centos-9-x86_64 with default parameters creates the certificate file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the certificate file with default filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:31: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on centos-9-x86_64 with fullchain_cert enabled uses fullchain.pem as source
+  Failure/Error:
+          let(:params) { { fullchain_cert: true } }
+  
+          it 'uses fullchain.pem as source' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              source: '/etc/letsencrypt/live/example.com/fullchain.pem',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:49: expected that the catalogue would contain File[/etc/ssl/certs/custom.crt]
+  serts::cert on centos-9-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.crt' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/certs/custom.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:57: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt]
+  serts::cert on centos-9-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:66: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on centos-9-x86_64 with server hostname matching system hostname uses server.crt.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.crt.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:73: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on centos-9-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+            end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:82: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on centos-9-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on centos-9-x86_64 with ensure absent removes the certificate file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the certificate file' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-8-x86_64 with default parameters creates the certificate file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the certificate file with default filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:31: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-8-x86_64 with fullchain_cert enabled uses fullchain.pem as source
+  Failure/Error:
+          let(:params) { { fullchain_cert: true } }
+  
+          it 'uses fullchain.pem as source' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              source: '/etc/letsencrypt/live/example.com/fullchain.pem',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:49: expected that the catalogue would contain File[/etc/ssl/certs/custom.crt]
+  serts::cert on redhat-8-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.crt' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/certs/custom.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:57: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt]
+  serts::cert on redhat-8-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:66: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on redhat-8-x86_64 with server hostname matching system hostname uses server.crt.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.crt.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:73: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on redhat-8-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+            end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:82: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-8-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-8-x86_64 with ensure absent removes the certificate file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the certificate file' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-9-x86_64 with default parameters creates the certificate file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the certificate file with default filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:31: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-9-x86_64 with fullchain_cert enabled uses fullchain.pem as source
+  Failure/Error:
+          let(:params) { { fullchain_cert: true } }
+  
+          it 'uses fullchain.pem as source' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              source: '/etc/letsencrypt/live/example.com/fullchain.pem',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:49: expected that the catalogue would contain File[/etc/ssl/certs/custom.crt]
+  serts::cert on redhat-9-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.crt' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/certs/custom.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:57: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt]
+  serts::cert on redhat-9-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:66: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on redhat-9-x86_64 with server hostname matching system hostname uses server.crt.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.crt.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:73: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on redhat-9-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+            end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:82: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-9-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on redhat-9-x86_64 with ensure absent removes the certificate file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the certificate file' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on rocky-8-x86_64 with default parameters creates the certificate file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the certificate file with default filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:31: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on rocky-8-x86_64 with fullchain_cert enabled uses fullchain.pem as source
+  Failure/Error:
+          let(:params) { { fullchain_cert: true } }
+  
+          it 'uses fullchain.pem as source' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              source: '/etc/letsencrypt/live/example.com/fullchain.pem',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:49: expected that the catalogue would contain File[/etc/ssl/certs/custom.crt]
+  serts::cert on rocky-8-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.crt' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/certs/custom.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:57: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt]
+  serts::cert on rocky-8-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:66: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on rocky-8-x86_64 with server hostname matching system hostname uses server.crt.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.crt.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:73: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on rocky-8-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+            end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:82: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on rocky-8-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on rocky-8-x86_64 with ensure absent removes the certificate file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the certificate file' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on almalinux-8-x86_64 with default parameters creates the certificate file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the certificate file with default filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:31: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on almalinux-8-x86_64 with fullchain_cert enabled uses fullchain.pem as source
+  Failure/Error:
+          let(:params) { { fullchain_cert: true } }
+  
+          it 'uses fullchain.pem as source' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              source: '/etc/letsencrypt/live/example.com/fullchain.pem',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:49: expected that the catalogue would contain File[/etc/ssl/certs/custom.crt]
+  serts::cert on almalinux-8-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.crt' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/certs/custom.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:57: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt]
+  serts::cert on almalinux-8-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:66: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on almalinux-8-x86_64 with server hostname matching system hostname uses server.crt.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.crt.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:73: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on almalinux-8-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+            end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:82: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on almalinux-8-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on almalinux-8-x86_64 with ensure absent removes the certificate file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the certificate file' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on fedora-40-x86_64 with default parameters creates the certificate file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the certificate file with default filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:31: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on fedora-40-x86_64 with fullchain_cert enabled uses fullchain.pem as source
+  Failure/Error:
+          let(:params) { { fullchain_cert: true } }
+  
+          it 'uses fullchain.pem as source' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              source: '/etc/letsencrypt/live/example.com/fullchain.pem',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:49: expected that the catalogue would contain File[/etc/ssl/certs/custom.crt]
+  serts::cert on fedora-40-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.crt' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/certs/custom.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:57: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt]
+  serts::cert on fedora-40-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:66: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on fedora-40-x86_64 with server hostname matching system hostname uses server.crt.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.crt.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+          end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:73: expected that the catalogue would contain File[/etc/ssl/certs/server.crt.pem]
+  serts::cert on fedora-40-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/certs/server.crt.pem')
+            end
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:82: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on fedora-40-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/cert_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/certs/example.com.crt.pem]
+  serts::cert on fedora-40-x86_64 with ensure absent removes the certificate file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the certificate file' do
+            is_expected.to contain_file('/etc/ssl/certs/example.com.crt.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffaa5b8998 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on centos-9-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnCentos9X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on centos-9-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnCentos9X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on centos-9-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffac2aaa10 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on redhat-8-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnRedhat8X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on redhat-8-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnRedhat8X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on redhat-8-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa96e1910 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on redhat-9-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnRedhat9X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on redhat-9-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnRedhat9X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on redhat-9-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa91a9f60 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on rocky-8-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnRocky8X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on rocky-8-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnRocky8X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on rocky-8-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa93a9ec8 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on almalinux-8-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnAlmalinux8X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on almalinux-8-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnAlmalinux8X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on almalinux-8-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa8d0c138 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on debian-11-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnDebian11X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on debian-11-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnDebian11X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on debian-11-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9d646c0 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on debian-12-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnDebian12X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on debian-12-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnDebian12X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on debian-12-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa91a96a0 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on ubuntu-20.04-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnUbuntu2004X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on ubuntu-20.04-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnUbuntu2004X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on ubuntu-20.04-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffa9c00518 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on ubuntu-22.04-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnUbuntu2204X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on ubuntu-22.04-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnUbuntu2204X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on ubuntu-22.04-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:213: undefined method `once' for #<RSpec::Puppet::ManifestMatchers::CreateGeneric:0x0000ffffac2d5e68 @exp_resource_type="serts__autopair", @args=["example.com"], @block=nil, @referenced_type="Serts::Autopair", @title="example.com", @errors=[], @expected_params=[], @expected_undef_params=[], @notifies=[], @subscribes=[], @requires=[], @befores=[]>
+  serts::certpair on fedora-40-x86_64 when autopair resource already exists does not create duplicate autopair resource
+  Failure/Error:
+          end
+  
+          it 'does not create duplicate autopair resource' do
+            is_expected.to contain_serts__autopair('example.com').once
+          end
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:217: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnFedora40X8664::WhenAutopairResourceAlreadyExists "shows warning about existing autopair resource" (./spec/defines/certpair_spec.rb:217)>
+  serts::certpair on fedora-40-x86_64 when autopair resource already exists shows warning about existing autopair resource
+  Failure/Error:
+          end
+  
+          it 'shows warning about existing autopair resource' do
+            expect(scope).to receive(:warning).with(%r{The Serts::Certpair example.com is set to use automatic certs, but a Serts::Autopair resource is already defined})
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/certpair_spec.rb:225: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsCertpair::OnFedora40X8664::WhenAutopairResourceAlreadyExists::WithIgnoreAutopairWarningEnabled "does not show warning" (./spec/defines/certpair_spec.rb:225)>
+  serts::certpair on fedora-40-x86_64 when autopair resource already exists with ignore_autopair_warning enabled does not show warning
+  Failure/Error:
+            let(:params) { { ignore_autopair_warning: true } }
+  
+            it 'does not show warning' do
+              expect(scope).not_to receive(:warning)
+              is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on centos-9-x86_64 with default parameters creates the key file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the key file with default filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:39: expected that the catalogue would contain File[/etc/ssl/private/custom.key]
+  serts::key on centos-9-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.key' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/private/custom.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:47: expected that the catalogue would contain File[/etc/ssl/private/example.com.key]
+  serts::key on centos-9-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:56: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on centos-9-x86_64 with server hostname matching system hostname uses server.key.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.key.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:63: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on centos-9-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+            end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:72: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on centos-9-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:83: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on centos-9-x86_64 with custom mode sets custom file mode
+  Failure/Error:
+          let(:params) { { mode: '0640' } }
+  
+          it 'sets custom file mode' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              mode: '0640',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on centos-9-x86_64 with ensure absent removes the key file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the key file' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnCentos9X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on centos-9-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:113: expected that the catalogue would contain File[/etc/ssl/private/myhost.key.pem]
+  serts::key on centos-9-x86_64 with title without domain and networking facts appends domain to create FQDN
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+  
+          it 'appends domain to create FQDN' do
+            is_expected.to contain_file('/etc/ssl/private/myhost.key.pem').with(
+              source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-8-x86_64 with default parameters creates the key file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the key file with default filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:39: expected that the catalogue would contain File[/etc/ssl/private/custom.key]
+  serts::key on redhat-8-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.key' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/private/custom.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:47: expected that the catalogue would contain File[/etc/ssl/private/example.com.key]
+  serts::key on redhat-8-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:56: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on redhat-8-x86_64 with server hostname matching system hostname uses server.key.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.key.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:63: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on redhat-8-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+            end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:72: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-8-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:83: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-8-x86_64 with custom mode sets custom file mode
+  Failure/Error:
+          let(:params) { { mode: '0640' } }
+  
+          it 'sets custom file mode' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              mode: '0640',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-8-x86_64 with ensure absent removes the key file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the key file' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnRedhat8X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on redhat-8-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:113: expected that the catalogue would contain File[/etc/ssl/private/myhost.key.pem]
+  serts::key on redhat-8-x86_64 with title without domain and networking facts appends domain to create FQDN
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+  
+          it 'appends domain to create FQDN' do
+            is_expected.to contain_file('/etc/ssl/private/myhost.key.pem').with(
+              source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-9-x86_64 with default parameters creates the key file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the key file with default filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:39: expected that the catalogue would contain File[/etc/ssl/private/custom.key]
+  serts::key on redhat-9-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.key' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/private/custom.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:47: expected that the catalogue would contain File[/etc/ssl/private/example.com.key]
+  serts::key on redhat-9-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:56: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on redhat-9-x86_64 with server hostname matching system hostname uses server.key.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.key.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:63: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on redhat-9-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+            end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:72: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-9-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:83: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-9-x86_64 with custom mode sets custom file mode
+  Failure/Error:
+          let(:params) { { mode: '0640' } }
+  
+          it 'sets custom file mode' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              mode: '0640',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on redhat-9-x86_64 with ensure absent removes the key file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the key file' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnRedhat9X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on redhat-9-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:113: expected that the catalogue would contain File[/etc/ssl/private/myhost.key.pem]
+  serts::key on redhat-9-x86_64 with title without domain and networking facts appends domain to create FQDN
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+  
+          it 'appends domain to create FQDN' do
+            is_expected.to contain_file('/etc/ssl/private/myhost.key.pem').with(
+              source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on rocky-8-x86_64 with default parameters creates the key file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the key file with default filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:39: expected that the catalogue would contain File[/etc/ssl/private/custom.key]
+  serts::key on rocky-8-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.key' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/private/custom.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:47: expected that the catalogue would contain File[/etc/ssl/private/example.com.key]
+  serts::key on rocky-8-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:56: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on rocky-8-x86_64 with server hostname matching system hostname uses server.key.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.key.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:63: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on rocky-8-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+            end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:72: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on rocky-8-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:83: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on rocky-8-x86_64 with custom mode sets custom file mode
+  Failure/Error:
+          let(:params) { { mode: '0640' } }
+  
+          it 'sets custom file mode' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              mode: '0640',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on rocky-8-x86_64 with ensure absent removes the key file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the key file' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnRocky8X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on rocky-8-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:113: expected that the catalogue would contain File[/etc/ssl/private/myhost.key.pem]
+  serts::key on rocky-8-x86_64 with title without domain and networking facts appends domain to create FQDN
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+  
+          it 'appends domain to create FQDN' do
+            is_expected.to contain_file('/etc/ssl/private/myhost.key.pem').with(
+              source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on almalinux-8-x86_64 with default parameters creates the key file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the key file with default filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:39: expected that the catalogue would contain File[/etc/ssl/private/custom.key]
+  serts::key on almalinux-8-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.key' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/private/custom.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:47: expected that the catalogue would contain File[/etc/ssl/private/example.com.key]
+  serts::key on almalinux-8-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:56: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on almalinux-8-x86_64 with server hostname matching system hostname uses server.key.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.key.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:63: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on almalinux-8-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+            end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:72: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on almalinux-8-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:83: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on almalinux-8-x86_64 with custom mode sets custom file mode
+  Failure/Error:
+          let(:params) { { mode: '0640' } }
+  
+          it 'sets custom file mode' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              mode: '0640',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on almalinux-8-x86_64 with ensure absent removes the key file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the key file' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnAlmalinux8X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on almalinux-8-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:113: expected that the catalogue would contain File[/etc/ssl/private/myhost.key.pem]
+  serts::key on almalinux-8-x86_64 with title without domain and networking facts appends domain to create FQDN
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+  
+          it 'appends domain to create FQDN' do
+            is_expected.to contain_file('/etc/ssl/private/myhost.key.pem').with(
+              source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnDebian11X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on debian-11-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnDebian12X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on debian-12-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnUbuntu2004X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on ubuntu-20.04-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnUbuntu2204X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on ubuntu-22.04-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:16: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on fedora-40-x86_64 with default parameters creates the key file with default filename
+  Failure/Error:
+          it { is_expected.to compile.with_all_deps }
+  
+          it 'creates the key file with default filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'file',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:39: expected that the catalogue would contain File[/etc/ssl/private/custom.key]
+  serts::key on fedora-40-x86_64 with custom filename uses custom filename
+  Failure/Error:
+          let(:params) { { filename: 'custom.key' } }
+  
+          it 'uses custom filename' do
+            is_expected.to contain_file('/etc/ssl/private/custom.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:47: expected that the catalogue would contain File[/etc/ssl/private/example.com.key]
+  serts::key on fedora-40-x86_64 with exclude_filetype enabled excludes file extension from filename
+  Failure/Error:
+          let(:params) { { exclude_filetype: true } }
+  
+          it 'excludes file extension from filename' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:56: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on fedora-40-x86_64 with server hostname matching system hostname uses server.key.pem as filename
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { hostname: 'server', domain: 'example.com', fqdn: 'server.example.com' } }) }
+  
+          it 'uses server.key.pem as filename' do
+            is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+          end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:63: expected that the catalogue would contain File[/etc/ssl/private/server.key.pem]
+  serts::key on fedora-40-x86_64 with server hostname matching system hostname with server_hostname disabled uses hostname-based filename instead of server
+  Failure/Error:
+            let(:params) { { server_hostname: false } }
+  
+            it 'uses hostname-based filename instead of server' do
+              is_expected.to contain_file('/etc/ssl/private/server.key.pem')
+            end
+
+
+failed: rspec: ./spec/defines/key_spec.rb:72: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on fedora-40-x86_64 with custom owner and group sets custom ownership
+  Failure/Error:
+          let(:params) { { owner: 'nginx', group: 'nginx' } }
+  
+          it 'sets custom ownership' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              owner: 'nginx',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:83: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on fedora-40-x86_64 with custom mode sets custom file mode
+  Failure/Error:
+          let(:params) { { mode: '0640' } }
+  
+          it 'sets custom file mode' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              mode: '0640',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:93: expected that the catalogue would contain File[/etc/ssl/private/example.com.key.pem]
+  serts::key on fedora-40-x86_64 with ensure absent removes the key file
+  Failure/Error:
+          let(:params) { { ensure: 'absent' } }
+  
+          it 'removes the key file' do
+            is_expected.to contain_file('/etc/ssl/private/example.com.key.pem').with(
+              ensure: 'absent',
+
+
+failed: rspec: ./spec/defines/key_spec.rb:103: undefined local variable or method `scope' for #<RSpec::ExampleGroups::SertsKey::OnFedora40X8664::WithUnsafeFilePermissions "shows a warning for unsafe permissions" (./spec/defines/key_spec.rb:103)>
+  serts::key on fedora-40-x86_64 with unsafe file permissions shows a warning for unsafe permissions
+  Failure/Error:
+          let(:params) { { mode: '0644' } }
+  
+          it 'shows a warning for unsafe permissions' do
+            expect(scope).to receive(:warning).with('The mode 0644 for the key example.com is too permissive.')
+            is_expected.to compile
+
+
+failed: rspec: ./spec/defines/key_spec.rb:113: expected that the catalogue would contain File[/etc/ssl/private/myhost.key.pem]
+  serts::key on fedora-40-x86_64 with title without domain and networking facts appends domain to create FQDN
+  Failure/Error:
+          let(:facts) { os_facts.merge({ networking: { domain: 'example.com' } }) }
+  
+          it 'appends domain to create FQDN' do
+            is_expected.to contain_file('/etc/ssl/private/myhost.key.pem').with(
+              source: '/etc/letsencrypt/live/myhost.example.com/privkey.pem',
+
+
+
+Total resources:   32
+Touched resources: 15
+Resource coverage: 46.88%
+
+Untouched resources:
+  File[/custom/certs/example.com.crt.pem]
+  File[/custom/keys/example.com.key.pem]
+  File[/etc/pki/tls/certs/custom.crt]
+  File[/etc/pki/tls/certs/example.com.crt.pem]
+  File[/etc/pki/tls/certs/example.com.crt]
+  File[/etc/pki/tls/certs/myhost.crt.pem]
+  File[/etc/pki/tls/certs/server.crt.pem]
+  File[/etc/pki/tls/certs]
+  File[/etc/pki/tls/private/custom.key]
+  File[/etc/pki/tls/private/example.com.key.pem]
+  File[/etc/pki/tls/private/example.com.key]
+  File[/etc/pki/tls/private/myhost.key.pem]
+  File[/etc/pki/tls/private/server.key.pem]
+  File[/etc/pki/tls/private]
+  File[/etc/ssl/certs/myhost.crt.pem]
+  File[/etc/ssl/certs]
+  File[/etc/ssl/private]

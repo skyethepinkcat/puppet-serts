@@ -16,7 +16,7 @@ class serts (
   # Enforce ordering of resources.
   Serts::Autopair <| |> ~> Serts::Cert <| |>
   Serts::Autopair <| |> ~> Serts::Key <| |>
-  Serts::Autopair <| |> ~> Serts::Bundle <| |>
+  #Serts::Autopair <| |> ~> Serts::Bundle <| |>
 
   if $manage_directories {
     file { $cert_directory:

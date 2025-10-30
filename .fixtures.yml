@@ -3,4 +3,9 @@
 ---
 fixtures:
   forge_modules:
-#     stdlib: "puppetlabs/stdlib"
+    stdlib: "puppetlabs/stdlib"
+    epel: "puppet/epel"
+    letsencrypt: "puppet/letsencrypt"
+    inifile: "puppetlabs/inifile"
+    cron_core: "puppetlabs/cron_core"
+    yumrepo_core: "puppetlabs/yumrepo_core"
