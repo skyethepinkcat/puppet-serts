@@ -16,5 +16,6 @@
     - 80chars
     - 140chars
     - selector_inside_resource
+    - parameter_documentation
   enabled_lint_checks:
     - parameter_types
