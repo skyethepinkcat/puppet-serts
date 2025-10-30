@@ -1,0 +1,70 @@
+name: Test
+
+on:
+  push:
+    branches: [ production ]
+  pull_request:
+    branches: [ production ]
+
+jobs:
+  unit_tests:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/puppet/pdk:latest
+
+    env:
+      PDK_DISABLE_ANALYTICS: 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check PDK version
+        run: pdk --version
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            vendor/
+            .bundle/
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Run unit tests
+        run: pdk test unit --verbose --format=junit:report.xml
+
+      - name: Publish test results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Unit Tests
+          path: report.xml
+          reporter: java-junit
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: test-results
+          path: report.xml
+
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/puppet/pdk:latest
+
+    env:
+      PDK_DISABLE_ANALYTICS: 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check PDK version
+        run: pdk --version
+
+      - name: Run linting
+        run: pdk validate
+        continue-on-error: true
