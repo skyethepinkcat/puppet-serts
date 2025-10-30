@@ -21,9 +21,6 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v5
 
-            - name: Gemfile Dependencies
-              run: pdk bundle install
-
             - name: Cache dependencies
               uses: actions/cache@v3
               with:
@@ -33,6 +30,9 @@ jobs:
                   key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-gems-
+
+            - name: Gemfile Dependencies
+              run: pdk bundle install
 
             - name: Generate reference
               run: pdk bundle exec rake strings:generate:reference
