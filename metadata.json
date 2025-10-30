@@ -1,10 +1,10 @@
 {
-  "name": "CSEE-Certs",
+  "name": "csee-serts",
   "version": "0.1.0",
   "author": "Skye Jonke",
-  "summary": "Our certs module",
+  "summary": "A module to simplify SSL certs.",
   "license": "MIT",
-  "source": "gogs@git.cs.umbc.edu:CSEE/puppet-modules/certs.git",
+  "source": "gogs@git.cs.umbc.edu:CSEE/puppet-modules/serts.git",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",

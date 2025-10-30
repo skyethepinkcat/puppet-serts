@@ -1,0 +1,3 @@
+---
+csee_certs::cert_directory: '/etc/pki/tls/certs'
+csee_certs::key_directory: '/etc/pki/tls/private'
