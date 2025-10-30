@@ -3,6 +3,14 @@
   acceptance_tests: true
   main_branches: [ 'production' ]
 
+.rubocop.yaml:
+  Layout/LineLength:
+    Max: 140
+  Style/WordArray:
+    EnforcedStyle: brackets
+  Lint/RedundantDirGlobSort:
+    Enabled: false
+
 .puppet-lint.rc:
   disabled_lint_checks:
     - 80chars
