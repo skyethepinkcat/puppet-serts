@@ -1,6 +1,6 @@
-# @summary Represents a CA bundle file.
-# @param ensure Whether the CA bundle file should be present or absent.
-# @param filename The name of the outputted CA bundle file
+# @summary Represents a CA trust chain. Wrapper for serts::bundle.
+# @param ensure Whether the CA chain file should be present or absent.
+# @param filename The name of the outputted CA bundle file. Defaults to the resource title.
 # @param directory The directory where the CA bundle file should be stored.
 # @param owner The owner of the CA bundle file.
 # @param group The group of the CA bundle file.

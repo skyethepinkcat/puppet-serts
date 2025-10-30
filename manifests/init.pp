@@ -5,6 +5,7 @@
 # @param manage_directories Whether to manage the certificate and key directories.
 # @param cert_directory The directory where certificates should be stored. Defaults to /etc/ssl/certs, or /etc/pki/tls/certs on RedHat systems.
 # @param key_directory The directory where private keys should be stored. Defaults to /etc/ssl/private, or /etc/pki/tls/private on RedHat systems.
+# @param letsencrypt_directory The directory where letsencrypt stores its data. Defaults to /etc/letsencrypt.
 class serts (
   Array[Stdlib::Host] $alt_names = [],
   Hash $letsencrypt_config = {},

@@ -21,6 +21,8 @@
 # @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
 # @param ignore_autopair_warning Whether to ignore a warning if a Serts::Autopair resource is already defined for this fqdn.
 # @param certname The name of the letsencrypt certpair to use. By default, this is the same as the fqdn.
+# @param include_chain Whether to include the CA trust chain in a default location; the cert_directory as ca_bundle.pem. 
+#   Does nothing if fullchain_cert is true.
 #
 # @example Basic usage with default parameters
 #   serts::certpair { 'myhost': }
@@ -44,9 +46,10 @@ define serts::certpair (
   Stdlib::Filemode $key_mode = '0600',
   Optional[String] $cert_filename = undef,
   Optional[String] $key_filename = undef,
-  Optional[Stdlib::AbsolutePath] $cert_directory = undef,
-  Optional[Stdlib::AbsolutePath] $key_directory = undef,
+  Stdlib::AbsolutePath $cert_directory = $serts::cert_directory,
+  Stdlib::AbsolutePath $key_directory = $serts::key_directory,
   Boolean $ignore_autopair_warning = false,
+  Boolean $include_chain = false,
   String $certname = $fqdn,
 ) {
   require serts
@@ -84,5 +87,20 @@ define serts::certpair (
     exclude_filetype => $exclude_filetype,
     server_hostname  => $server_hostname,
     mode             => $key_mode,
+  }
+
+  if $include_chain and ! $fullchain_cert {
+    serts::chain { 'ca_bundle.pem':
+      ensure    => $ensure,
+      filename  => 'ca_bundle.pem',
+      certname  => $certname,
+      directory => $cert_directory ? {
+        undef   => $serts::cert_directory,
+        default => $cert_directory,
+      },
+      owner     => $owner,
+      group     => $group,
+      mode      => $cert_mode,
+    }
   }
 }
