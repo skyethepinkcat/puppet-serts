@@ -1,0 +1,33 @@
+name: Update GitHub Pages
+
+on:
+  push:
+    branches: [ production ]
+
+jobs:
+  update_gh_pages:
+    runs-on: ubuntu-latest
+    container:
+      image: docker.io/puppet/pdk:latest
+
+    env:
+      PDK_DISABLE_ANALYTICS: 'true'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            vendor/
+            .bundle/
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+
+      - name: Update GitHub Pages
+        run: rake strings:gh_pages:update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
