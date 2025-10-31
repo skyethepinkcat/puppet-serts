@@ -82,3 +82,8 @@ pdk validate
 ## License
 
 This module is licensed under the MIT License. See the LICENSE file for details.
+
+## AI Usage
+
+Development was supported by GitHub copilot in places, and tests + README were intially generated using it.
+All code was manually reviewed by a human.
