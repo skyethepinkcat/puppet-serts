@@ -23,7 +23,7 @@
       "version_requirement": ">= 6.0.0 < 7.0.0"
     },
     {
-      "name": "puppet/concat",
+      "name": "puppetlabs/concat",
       "version_requirement": ">= 6.0.0 < 10.0.0"
     }
   ],
