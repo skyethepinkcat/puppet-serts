@@ -55,7 +55,8 @@
                 "default"
                 "development"
                 "test"
-                "system-tests"
+                "system_tests"
+                "release"
               ];
             })
             env

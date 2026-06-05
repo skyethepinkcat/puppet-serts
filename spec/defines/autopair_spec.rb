@@ -122,6 +122,20 @@ describe 'serts::autopair' do
           )
         end
       end
+
+      context 'with renewal_options' do
+        let(:params) { { renewal_options: { 'renewalparams' => { 'reuse_key' => 'true' } } } }
+
+        it { is_expected.to compile.with_all_deps }
+
+        it do
+          is_expected.to contain_ini_setting('/etc/letsencrypt/renewal/test.example.com.conf [renewalparams] reuse_key').with(
+            'section' => 'renewalparams',
+            'setting' => 'reuse_key',
+            'value' => 'true',
+          )
+        end
+      end
     end
   end
 end
