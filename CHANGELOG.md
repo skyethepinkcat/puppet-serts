@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v0.1.2](https://github.com/skyethepinkcat/puppet-serts/tree/v0.1.2) (2026-06-05)
+
+[Full Changelog](https://github.com/skyethepinkcat/puppet-serts/compare/v0.1.1...v0.1.2)
+
+**Merged pull requests:**
+
+- Add Renewal Options [\#3](https://github.com/skyethepinkcat/puppet-serts/pull/3) ([skyethepinkcat](https://github.com/skyethepinkcat))
+
+## [v0.1.1](https://github.com/skyethepinkcat/puppet-serts/tree/v0.1.1) (2025-10-30)
+
+[Full Changelog](https://github.com/skyethepinkcat/puppet-serts/compare/v0.1.0...v0.1.1)
+
 ## [v0.1.0](https://github.com/skyethepinkcat/puppet-serts/tree/v0.1.0) (2025-10-30)
 
 [Full Changelog](https://github.com/skyethepinkcat/puppet-serts/compare/1a050b05c3d16b139205e36658c1dc0a64885eef...v0.1.0)
