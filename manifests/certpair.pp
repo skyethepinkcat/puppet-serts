@@ -21,8 +21,9 @@
 # @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
 # @param ignore_autopair_warning Whether to ignore a warning if a Serts::Autopair resource is already defined for this fqdn.
 # @param certname The name of the letsencrypt certpair to use. By default, this is the same as the fqdn.
-# @param include_chain Whether to include the CA trust chain in a default location; the cert_directory as ca_bundle.pem. 
+# @param include_chain Whether to include the CA trust chain in a default location; the cert_directory as ca_bundle.pem.
 #   Does nothing if fullchain_cert is true.
+# @param renewal_options Extra options to set in the cert configuration file.
 #
 # @example Basic usage with default parameters
 #   serts::certpair { 'myhost': }
@@ -51,6 +52,7 @@ define serts::certpair (
   Boolean $ignore_autopair_warning = false,
   Boolean $include_chain = false,
   String $certname = $fqdn,
+  Hash $renewal_options = {},
 ) {
   require serts
 
@@ -68,9 +70,10 @@ define serts::certpair (
 
   if (!defined(Serts::Autopair[$certname])) {
     serts::autopair { $certname:
-      ensure    => $ensure,
-      fqdn      => $fqdn,
-      alt_names => $alt_names,
+      ensure          => $ensure,
+      fqdn            => $fqdn,
+      alt_names       => $alt_names,
+      renewal_options => $renewal_options,
     }
   } else {
     unless $ignore_autopair_warning {
