@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v0.1.3](https://github.com/skyethepinkcat/puppet-serts/tree/v0.1.3) (2026-06-05)
+
+[Full Changelog](https://github.com/skyethepinkcat/puppet-serts/compare/v0.1.2...v0.1.3)
+
+**Merged pull requests:**
+
+- fix: resolved rubocop errors [\#10](https://github.com/skyethepinkcat/puppet-serts/pull/10) ([skyethepinkcat](https://github.com/skyethepinkcat))
+- modulesync 10.8.0-4-gcc49792 [\#9](https://github.com/skyethepinkcat/puppet-serts/pull/9) ([skyethepinkcat](https://github.com/skyethepinkcat))
+- feat: bump versions [\#8](https://github.com/skyethepinkcat/puppet-serts/pull/8) ([skyethepinkcat](https://github.com/skyethepinkcat))
+
 ## [v0.1.2](https://github.com/skyethepinkcat/puppet-serts/tree/v0.1.2) (2026-06-05)
 
 [Full Changelog](https://github.com/skyethepinkcat/puppet-serts/compare/v0.1.1...v0.1.2)
