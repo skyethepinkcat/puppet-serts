@@ -67,7 +67,7 @@ describe 'serts::chain' do
         let(:params) do
           {
             owner: 'nginx',
-            group: 'nginx'
+            group: 'nginx',
           }
         end
 

@@ -71,7 +71,7 @@ describe 'serts::bundle' do
         let(:params) do
           {
             owner: 'nginx',
-            group: 'nginx'
+            group: 'nginx',
           }
         end
 
@@ -118,7 +118,7 @@ describe 'serts::bundle' do
               'file:///path/to/cert1.pem',
               'file:///path/to/cert2.pem',
               'file:///path/to/cert3.pem',
-            ]
+            ],
           }
         end
 

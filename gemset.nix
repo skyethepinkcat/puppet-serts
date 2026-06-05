@@ -890,6 +890,30 @@
     targets = [];
     version = "6.2.0";
   };
+  language_server-protocol = {
+    groups = ["default" "test"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1k0311vah76kg5m6zr7wmkwyk5p2f9d9hyckjpn3xgr83ajkj7px";
+      target = "ruby";
+      type = "gem";
+    };
+    targets = [];
+    version = "3.17.0.5";
+  };
+  lint_roller = {
+    groups = ["default" "test"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "11yc0d84hsnlvx8cpk4cbj6a4dz9pk0r1k29p0n1fz9acddq831c";
+      target = "ruby";
+      type = "gem";
+    };
+    targets = [];
+    version = "1.1.0";
+  };
   listen = {
     dependencies = ["logger" "rb-fsevent" "rb-inotify"];
     groups = ["default" "development"];
@@ -964,6 +988,19 @@
     };
     targets = [];
     version = "1.4.2";
+  };
+  mcp = {
+    dependencies = ["json-schema"];
+    groups = ["default" "test"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "1j324pp1fjfjm1cflsfr1r4bcprmf999slwn04vm6vskq5rcb3jd";
+      target = "ruby";
+      type = "gem";
+    };
+    targets = [];
+    version = "0.18.0";
   };
   metadata-json-lint = {
     dependencies = ["json-schema" "semantic_puppet" "spdx-licenses"];
@@ -1256,17 +1293,17 @@
     version = "8.27.0";
   };
   openvox-strings = {
-    dependencies = ["irb" "openvox" "rgen" "yard"];
+    dependencies = ["irb" "rgen" "yard"];
     groups = ["default" "release" "test"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1xgrpdia12w35sww2byi3i6dxdll6i7f6i7rg5l0jqa2l3z615ki";
+      sha256 = "1arrmf8npqydxzfrcb423pxb8n645spw3nll7dxnanapval7wy2l";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "6.1.0";
+    version = "7.1.0";
   };
   ostruct = {
     groups = ["default" "release" "test"];
@@ -1848,12 +1885,12 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "11bs6ksgjy1q7kfrlrb2dfwrwz2as6r5rhpx9qa7xr0fc9hwl7di";
+      sha256 = "19ns19vp3xd3l0n984abkpkhplmmbbm2z104c690vdxd9f3gy4b9";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "5.3.0";
+    version = "6.2.0";
   };
   racc = {
     groups = ["default" "release" "system_tests" "test"];
@@ -2120,17 +2157,17 @@
     version = "1.0.9";
   };
   rubocop = {
-    dependencies = ["json" "parallel" "parser" "rainbow" "regexp_parser" "rexml" "rubocop-ast" "ruby-progressbar" "unicode-display_width"];
+    dependencies = ["json" "language_server-protocol" "lint_roller" "mcp" "parallel" "parser" "rainbow" "regexp_parser" "rubocop-ast" "ruby-progressbar" "unicode-display_width"];
     groups = ["default" "test"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0l46lw5gfj3mcm982wpmx7br4rs466gyislv0hfwcsk8dxhv1zkw";
+      sha256 = "0xyc0rs1xaiqln7x611v0f3kjpna7n8h6apbxrvc795sc7lzkg1x";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "1.50.2";
+    version = "1.85.1";
   };
   rubocop-ast = {
     dependencies = ["parser" "prism"];
@@ -2145,44 +2182,31 @@
     targets = [];
     version = "1.49.1";
   };
-  rubocop-capybara = {
-    dependencies = ["rubocop"];
-    groups = ["default" "test"];
-    platforms = [];
-    source = {
-      remotes = ["https://rubygems.org"];
-      sha256 = "1aw0n8jwhsr39r9q2k90xjmcz8ai2k7xx2a87ld0iixnv3ylw9jx";
-      target = "ruby";
-      type = "gem";
-    };
-    targets = [];
-    version = "2.21.0";
-  };
   rubocop-rake = {
-    dependencies = ["rubocop"];
+    dependencies = ["lint_roller" "rubocop"];
     groups = ["default" "test"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "1nyq07sfb3vf3ykc6j2d5yq824lzq1asb474yka36jxgi4hz5djn";
+      sha256 = "0kdfrckz1v32dy7c7bdiksjysx9l9zsda9kc6zvrsghch6vg55rp";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "0.6.0";
+    version = "0.7.1";
   };
   rubocop-rspec = {
-    dependencies = ["rubocop" "rubocop-capybara"];
+    dependencies = ["lint_roller" "rubocop"];
     groups = ["default" "test"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0ydmr0qhldrndh86zy87yyl17i1mcxfv83jzb6lmx18cghkz7lpd";
+      sha256 = "1qjmvcpk6qwxjdh3w5smr2n7c1glxsdzpv5fi7bkg0j034v0m9wg";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "2.20.0";
+    version = "3.9.0";
   };
   ruby-progressbar = {
     groups = ["default" "test"];
@@ -2482,17 +2506,17 @@
     version = "7.0.0";
   };
   voxpupuli-release = {
-    dependencies = ["faraday-retry" "github_changelog_generator" "openvox-strings" "puppet-blacksmith" "rake" "syslog"];
+    dependencies = ["faraday-retry" "github_changelog_generator" "openvox" "openvox-strings" "puppet-blacksmith" "rake" "syslog"];
     groups = ["release"];
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0p9rdr2jpzblj36rskxv39lxb5ccmc09laxxfp0f20fvv1cj01b3";
+      sha256 = "1l6fqx7ckmpvblji0ag8g3ni6blygf3rv28lhrm2f1w6rg3hwa3m";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "5.2.0";
+    version = "5.4.1";
   };
   voxpupuli-test = {
     dependencies = ["facterdb" "metadata-json-lint" "openvox-strings" "parallel_tests" "puppet-syntax" "puppet_fixtures" "rake" "rspec-github" "rspec-puppet" "rspec-puppet-facts" "rubocop" "rubocop-rake" "rubocop-rspec" "syslog" "voxpupuli-puppet-lint-plugins"];
@@ -2500,12 +2524,12 @@
     platforms = [];
     source = {
       remotes = ["https://rubygems.org"];
-      sha256 = "0xi2nwx34j3anyqipch85sbbasmrqma9hb3qh3gq733pd6ygmd9f";
+      sha256 = "14vyxv8rwyhmmznfq507lrbkfmz8053kzppd28asljc9h981w5ai";
       target = "ruby";
       type = "gem";
     };
     targets = [];
-    version = "13.2.0";
+    version = "14.0.0";
   };
   winrm = {
     dependencies = ["builder" "erubi" "gssapi" "gyoku" "httpclient" "logging" "nori" "rexml" "rubyntlm"];
