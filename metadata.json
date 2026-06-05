@@ -1,6 +1,6 @@
 {
   "name": "skyejonke-serts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Skye Jonke",
   "summary": "A module to simplify SSL certs.",
   "license": "MIT",
