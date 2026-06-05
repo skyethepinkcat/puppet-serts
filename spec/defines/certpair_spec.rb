@@ -75,7 +75,7 @@ describe 'serts::certpair' do
         let(:params) do
           {
             owner: 'nginx',
-            group: 'nginx'
+            group: 'nginx',
           }
         end
 
@@ -124,7 +124,7 @@ describe 'serts::certpair' do
         let(:params) do
           {
             cert_mode: '0640',
-            key_mode: '0640'
+            key_mode: '0640',
           }
         end
 
@@ -147,7 +147,7 @@ describe 'serts::certpair' do
         let(:params) do
           {
             cert_filename: 'custom.crt',
-            key_filename: 'custom.key'
+            key_filename: 'custom.key',
           }
         end
 
@@ -170,7 +170,7 @@ describe 'serts::certpair' do
         let(:params) do
           {
             cert_directory: '/custom/certs',
-            key_directory: '/custom/keys'
+            key_directory: '/custom/keys',
           }
         end
 

@@ -61,7 +61,7 @@ describe 'serts' do
         let(:params) do
           {
             cert_directory: '/custom/certs',
-            key_directory: '/custom/keys'
+            key_directory: '/custom/keys',
           }
         end
 
@@ -99,8 +99,8 @@ describe 'serts' do
           {
             letsencrypt_config: {
               'email' => 'admin@example.com',
-              'plugin' => 'apache'
-            }
+              'plugin' => 'apache',
+            },
           }
         end
 
@@ -110,7 +110,7 @@ describe 'serts' do
           is_expected.to contain_class('letsencrypt').with(
             'config' => {
               'email' => 'admin@example.com',
-              'plugin' => 'apache'
+              'plugin' => 'apache',
             },
           )
         end

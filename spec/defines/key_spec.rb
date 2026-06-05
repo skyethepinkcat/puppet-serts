@@ -62,7 +62,7 @@ describe 'serts::key' do
         let(:params) do
           {
             owner: 'nginx',
-            group: 'nginx'
+            group: 'nginx',
           }
         end
 
@@ -155,7 +155,7 @@ describe 'serts::key' do
         let(:params) do
           {
             server_hostname: true,
-            exclude_filetype: true
+            exclude_filetype: true,
           }
         end
 
