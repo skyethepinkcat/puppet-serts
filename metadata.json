@@ -12,7 +12,7 @@
     },
     {
       "name": "puppet/letsencrypt",
-      "version_requirement": ">= 12.0.0 < 13.0.0"
+      "version_requirement": ">= 13.3.0"
     },
     {
       "name": "puppetlabs/inifile",
@@ -20,10 +20,10 @@
     },
     {
       "name": "puppet/epel",
-      "version_requirement": ">= 3.0.1 < 6.0.0"
+      "version_requirement": ">= 6.0.0 < 7.0.0"
     },
     {
-      "name": "puppet/concat",
+      "name": "puppetlabs/concat",
       "version_requirement": ">= 6.0.0 < 10.0.0"
     }
   ],
