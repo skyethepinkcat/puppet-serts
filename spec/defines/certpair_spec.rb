@@ -23,6 +23,7 @@ describe 'serts::certpair' do
             'fqdn' => 'test.example.com',
             'alt_names' => [],
             'certname' => 'test.example.com',
+            'renewal_options' => {},
           )
         end
 
@@ -254,6 +255,18 @@ describe 'serts::certpair' do
         it { is_expected.to compile.with_all_deps }
         # This parameter doesn't affect resource declaration, just warnings
         it { is_expected.to contain_serts__autopair('test.example.com') }
+      end
+
+      context 'with renewal_options' do
+        let(:params) { { renewal_options: { 'renewalparams' => { 'reuse_key' => 'true' } } } }
+
+        it { is_expected.to compile.with_all_deps }
+
+        it do
+          is_expected.to contain_serts__autopair('test.example.com').with(
+            'renewal_options' => { 'renewalparams' => { 'reuse_key' => 'true' } },
+          )
+        end
       end
     end
   end

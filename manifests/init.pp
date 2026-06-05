@@ -6,6 +6,7 @@
 # @param cert_directory The directory where certificates should be stored. Defaults to /etc/ssl/certs, or /etc/pki/tls/certs on RedHat systems.
 # @param key_directory The directory where private keys should be stored. Defaults to /etc/ssl/private, or /etc/pki/tls/private on RedHat systems.
 # @param letsencrypt_directory The directory where letsencrypt stores its data. Defaults to /etc/letsencrypt.
+# @param default_renewal_settings Default settings for renewal configurations.
 class serts (
   Array[Stdlib::Host] $alt_names = [],
   Hash $letsencrypt_config = {},
@@ -21,6 +22,7 @@ class serts (
   String $key_directory_mode = '0511',
   Stdlib::AbsolutePath $letsencrypt_directory = '/etc/letsencrypt',
   Enum['suppress', 'log', 'none'] $cron_output = 'none',
+  Hash $default_renewal_settings = {},
 ) {
   # Enforce ordering of resources.
   Serts::Autopair <| |> ~> Serts::Cert <| |>

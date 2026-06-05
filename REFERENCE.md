@@ -10,8 +10,7 @@
 
 ### Defined types
 
-* [`serts::autopair`](#serts--autopair): Automatically create a certpair using Certbot for the given hostname and domain. You probably want to use serts::certpair
-instead of this to manage the resulting cert and key files.
+* [`serts::autopair`](#serts--autopair): Automatically create a certpair using Certbot for the given fqdn. Use serts::certpair instead of this to manage the resulting cert and key files.
 * [`serts::bundle`](#serts--bundle): Represents a CA bundle file.
 * [`serts::cert`](#serts--cert): Represents a certificate and its key. You might want to use serts::certpair instead.
 * [`serts::certpair`](#serts--certpair): Represents a certificate and its key.
@@ -35,6 +34,7 @@ The following parameters are available in the `serts` class:
 * [`cert_directory`](#-serts--cert_directory)
 * [`key_directory`](#-serts--key_directory)
 * [`letsencrypt_directory`](#-serts--letsencrypt_directory)
+* [`default_renewal_settings`](#-serts--default_renewal_settings)
 * [`link_directories`](#-serts--link_directories)
 * [`cert_directory_owner`](#-serts--cert_directory_owner)
 * [`cert_directory_group`](#-serts--cert_directory_group)
@@ -92,6 +92,14 @@ Data type: `Stdlib::AbsolutePath`
 The directory where letsencrypt stores its data. Defaults to /etc/letsencrypt.
 
 Default value: `'/etc/letsencrypt'`
+
+##### <a name="-serts--default_renewal_settings"></a>`default_renewal_settings`
+
+Data type: `Hash`
+
+Default settings for renewal configurations.
+
+Default value: `{}`
 
 ##### <a name="-serts--link_directories"></a>`link_directories`
 
@@ -161,8 +169,7 @@ Default value: `'none'`
 
 ### <a name="serts--autopair"></a>`serts::autopair`
 
-Automatically create a certpair using Certbot for the given hostname and domain. You probably want to use serts::certpair
-instead of this to manage the resulting cert and key files.
+Automatically create a certpair using Certbot for the given fqdn. Use serts::certpair instead of this to manage the resulting cert and key files.
 
 #### Parameters
 
@@ -175,6 +182,7 @@ The following parameters are available in the `serts::autopair` defined type:
 * [`manage_cron`](#-serts--autopair--manage_cron)
 * [`cron_output`](#-serts--autopair--cron_output)
 * [`certname`](#-serts--autopair--certname)
+* [`renewal_options`](#-serts--autopair--renewal_options)
 
 ##### <a name="-serts--autopair--title"></a>`title`
 
@@ -229,6 +237,14 @@ Data type: `String`
 The name of the cert/key to create. By default, this is the same as the fqdn.
 
 Default value: `$fqdn`
+
+##### <a name="-serts--autopair--renewal_options"></a>`renewal_options`
+
+Data type: `Hash`
+
+Extra options to set in the cert configuration files.
+
+Default value: `{}`
 
 ### <a name="serts--bundle"></a>`serts::bundle`
 
@@ -471,6 +487,7 @@ The following parameters are available in the `serts::certpair` defined type:
 * [`ignore_autopair_warning`](#-serts--certpair--ignore_autopair_warning)
 * [`certname`](#-serts--certpair--certname)
 * [`include_chain`](#-serts--certpair--include_chain)
+* [`renewal_options`](#-serts--certpair--renewal_options)
 
 ##### <a name="-serts--certpair--ensure"></a>`ensure`
 
@@ -617,6 +634,14 @@ Whether to include the CA trust chain in a default location; the cert_directory 
 Does nothing if fullchain_cert is true.
 
 Default value: `false`
+
+##### <a name="-serts--certpair--renewal_options"></a>`renewal_options`
+
+Data type: `Hash`
+
+Extra options to set in the cert configuration file.
+
+Default value: `{}`
 
 ### <a name="serts--chain"></a>`serts::chain`
 

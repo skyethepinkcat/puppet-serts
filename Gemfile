@@ -11,6 +11,8 @@ end
 group :development do
   gem 'guard-rake',               :require => false
   gem 'overcommit', '>= 0.39.1',  :require => false
+  gem "puppet-lint"
+  gem 'rubocop'
 end
 
 group :system_tests do
