@@ -54,7 +54,8 @@
               groups = [
                 "default"
                 "development"
-                "updates"
+                "test"
+                "system-tests"
               ];
             })
             env
