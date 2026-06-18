@@ -55,7 +55,7 @@ define serts::bundle (
     }
     unless $ensure == 'absent' {
       $components.each |Integer $index, Stdlib::Filesource $component| {
-        concat::fragment { "${ca_bundle_name}-${index}":
+        concat::fragment { "${concat_target}-${index}":
           target => $concat_target,
           source => $component,
           order  => $index,
