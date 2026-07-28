@@ -120,6 +120,7 @@
             };
           };
           devShells.default = pkgs.mkShell {
+            name = "puppet-serts";
             packages = [
               env
               bundixcli
