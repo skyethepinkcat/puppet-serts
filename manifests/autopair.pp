@@ -1,4 +1,5 @@
-# @summary Automatically create a certpair using Certbot for the given fqdn. Use serts::certpair instead of this to manage the resulting cert and key files.
+# @summary Automatically create a certpair using Certbot for the given fqdn.
+# @note Use serts::certpair instead of this to manage the resulting cert and key files.
 # @param title The name of the resource, which should be the fully qualified domain name (FQDN) for the cert.
 # @param ensure Whether the certificate and key should be present or absent.
 # @param fqdn The fully qualified domain name of the url the cert is for. By default, this is the title of the resource,
