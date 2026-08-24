@@ -131,9 +131,9 @@ describe 'serts::bundle' do
           )
         end
 
-        it { is_expected.to contain_concat__fragment('ca-bundle.pem-0') }
-        it { is_expected.to contain_concat__fragment('ca-bundle.pem-1') }
-        it { is_expected.to contain_concat__fragment('ca-bundle.pem-2') }
+        it { is_expected.to contain_concat__fragment("#{expected_cert_dir}/ca-bundle.pem-0") }
+        it { is_expected.to contain_concat__fragment("#{expected_cert_dir}/ca-bundle.pem-1") }
+        it { is_expected.to contain_concat__fragment("#{expected_cert_dir}/ca-bundle.pem-2") }
       end
 
       context 'with custom ca_bundle_name' do
