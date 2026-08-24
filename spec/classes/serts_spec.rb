@@ -94,10 +94,10 @@ describe 'serts' do
         it { is_expected.not_to contain_file('/etc/ssl/private') }
       end
 
-      context 'with custom letsencrypt_config' do
+      context 'with custom certbot_config' do
         let(:params) do
           {
-            letsencrypt_config: {
+            certbot_config: {
               'email' => 'admin@example.com',
               'plugin' => 'apache',
             },
@@ -112,6 +112,24 @@ describe 'serts' do
               'email' => 'admin@example.com',
               'plugin' => 'apache',
             },
+          )
+        end
+      end
+
+      context 'with custom letsencrypt_config' do
+        let(:params) do
+          {
+            letsencrypt_config: {
+              'environment' => ['test=1'],
+            },
+          }
+        end
+
+        it { is_expected.to compile.with_all_deps }
+
+        it do
+          is_expected.to contain_class('letsencrypt').with(
+            'environment' => ['test=1'],
           )
         end
       end

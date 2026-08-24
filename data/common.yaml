@@ -4,6 +4,6 @@ serts::alt_names: []
 serts::cert_directory: '/etc/ssl/certs'
 serts::key_directory: '/etc/ssl/private'
 
-serts::letsencrypt_config:
+serts::certbot_config:
   email: 'example_email@gmail.com'
   server: 'https://acme-v02.api.letsencrypt.org/directory'

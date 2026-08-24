@@ -1,15 +1,16 @@
 # @summary Manage our custom certs.
 # @param alt_names An array of additional hostnames that should be included for the system's main certpair,
 #   only used by hiera lookup.
-# @param letsencrypt_config A hash of additional configuration options to pass to the letsencrypt class.
+# @param certbot_config A hash of additional configuration options to pass to cerbot.
 # @param manage_directories Whether to manage the certificate and key directories.
 # @param cert_directory The directory where certificates should be stored. Defaults to /etc/ssl/certs, or /etc/pki/tls/certs on RedHat systems.
 # @param key_directory The directory where private keys should be stored. Defaults to /etc/ssl/private, or /etc/pki/tls/private on RedHat systems.
 # @param letsencrypt_directory The directory where letsencrypt stores its data. Defaults to /etc/letsencrypt.
 # @param default_renewal_settings Default settings for renewal configurations.
+# @param letsencrypt_config Extra configuration for the letsencrypt class.
 class serts (
   Array[Stdlib::Host] $alt_names = [],
-  Hash $letsencrypt_config = {},
+  Hash $certbot_config = {},
   Boolean $manage_directories = true,
   Boolean $link_directories = false,
   Stdlib::AbsolutePath $cert_directory = '/etc/ssl/certs',
@@ -23,6 +24,7 @@ class serts (
   Stdlib::AbsolutePath $letsencrypt_directory = '/etc/letsencrypt',
   Enum['suppress', 'log', 'none'] $cron_output = 'none',
   Hash $default_renewal_settings = {},
+  Hash $letsencrypt_config = {},
 ) {
   # Enforce ordering of resources.
   Serts::Autopair <| |> ~> Serts::Cert <| |>
@@ -59,6 +61,7 @@ class serts (
   }
   class { 'letsencrypt':
     configure_epel => false,
-    config         => $letsencrypt_config,
+    config         => $certbot_config,
+    *              => $letsencrypt_config,
   }
 }

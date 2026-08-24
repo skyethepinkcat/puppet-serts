@@ -10,7 +10,7 @@
 
 ### Defined types
 
-* [`serts::autopair`](#serts--autopair): Automatically create a certpair using Certbot for the given fqdn. Use serts::certpair instead of this to manage the resulting cert and key files.
+* [`serts::autopair`](#serts--autopair): Automatically create a certpair using Certbot for the given fqdn.
 * [`serts::bundle`](#serts--bundle): Represents a CA bundle file.
 * [`serts::cert`](#serts--cert): Represents a certificate and its key. You might want to use serts::certpair instead.
 * [`serts::certpair`](#serts--certpair): Represents a certificate and its key.
@@ -29,12 +29,13 @@ Manage our custom certs.
 The following parameters are available in the `serts` class:
 
 * [`alt_names`](#-serts--alt_names)
-* [`letsencrypt_config`](#-serts--letsencrypt_config)
+* [`certbot_config`](#-serts--certbot_config)
 * [`manage_directories`](#-serts--manage_directories)
 * [`cert_directory`](#-serts--cert_directory)
 * [`key_directory`](#-serts--key_directory)
 * [`letsencrypt_directory`](#-serts--letsencrypt_directory)
 * [`default_renewal_settings`](#-serts--default_renewal_settings)
+* [`letsencrypt_config`](#-serts--letsencrypt_config)
 * [`link_directories`](#-serts--link_directories)
 * [`cert_directory_owner`](#-serts--cert_directory_owner)
 * [`cert_directory_group`](#-serts--cert_directory_group)
@@ -53,11 +54,11 @@ only used by hiera lookup.
 
 Default value: `[]`
 
-##### <a name="-serts--letsencrypt_config"></a>`letsencrypt_config`
+##### <a name="-serts--certbot_config"></a>`certbot_config`
 
 Data type: `Hash`
 
-A hash of additional configuration options to pass to the letsencrypt class.
+A hash of additional configuration options to pass to cerbot.
 
 Default value: `{}`
 
@@ -98,6 +99,14 @@ Default value: `'/etc/letsencrypt'`
 Data type: `Hash`
 
 Default settings for renewal configurations.
+
+Default value: `{}`
+
+##### <a name="-serts--letsencrypt_config"></a>`letsencrypt_config`
+
+Data type: `Hash`
+
+Extra configuration for the letsencrypt class.
 
 Default value: `{}`
 
@@ -169,7 +178,9 @@ Default value: `'none'`
 
 ### <a name="serts--autopair"></a>`serts::autopair`
 
-Automatically create a certpair using Certbot for the given fqdn. Use serts::certpair instead of this to manage the resulting cert and key files.
+Automatically create a certpair using Certbot for the given fqdn.
+
+* **Note** Use serts::certpair instead of this to manage the resulting cert and key files.
 
 #### Parameters
 
