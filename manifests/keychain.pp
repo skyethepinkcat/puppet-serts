@@ -7,7 +7,7 @@
 # @param mode The file mode for the keychain file.
 # @param fqdn The fully qualified domain name of the url the cert is for. By default, this is the title of the resource,
 #   but if the title does not contain a dot, the system's domain will be appended to it.
-# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem. Defaults to false.
 # @param alt_names An array of additional fqdns that should be included. If the fqdn matches
 #   the system's fqdn, additional alt names will be looked up from hiera.
 # @param exclude_filetype Whether to exclude the filetype from the filename. Defaults to false, which
@@ -37,6 +37,10 @@ define serts::keychain (
 ) {
   require serts
 
+  $real_fullchain_cert = $fullchain_cert ? {
+    undef => $serts::fullchain_cert
+    default => $fullchain_cert
+  }
   $real_directory = $directory ? {
     undef   => $serts::cert_directory,
     default => $directory,
@@ -59,13 +63,13 @@ define serts::keychain (
     components     => $key_first ? {
       true    => [
         "${serts::letsencrypt_directory}/live/${certname}/privkey.pem",
-        $fullchain_cert ? {
+        $real_fullchain_cert ? {
           true  => "${serts::letsencrypt_directory}/live/${certname}/fullchain.pem",
           false => "${serts::letsencrypt_directory}/live/${certname}/cert.pem",
         },
       ],
       default => [
-        $fullchain_cert ? {
+        $real_fullchain_cert ? {
           true  => "${serts::letsencrypt_directory}/live/${certname}/fullchain.pem",
           false => "${serts::letsencrypt_directory}/live/${certname}/cert.pem",
         },

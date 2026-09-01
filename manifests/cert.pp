@@ -6,13 +6,13 @@
 # @param directory The directory where the certificate should be stored.
 # @param filename The name of the certificate file.  If not given, it will be
 #   determined based on the hostname like "server.crt.pem".
-# @param exclude_filetype Whether to exclude the filetype from the filename. Defaults to false, which 
+# @param exclude_filetype Whether to exclude the filetype from the filename. Defaults to false, which
 #   means the file will be named like "server.crt.pem". If true, it will be named like "server.crt".
 # @param server_hostname Whether to use 'server' as the filename if the hostname matches the system's hostname. Defaults to true.
 # @param mode The file mode for the certificate file.
-# @param fqdn The fully qualified domain name of the url the cert is for. By default, this is the title of the resource, 
+# @param fqdn The fully qualified domain name of the url the cert is for. By default, this is the title of the resource,
 #   but if the title does not contain a dot, the system's domain will be appended.
-# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem. Defaults to false.
 # @param certname The name of the letsencrypt certpair to use. By default, this is the same as the fqdn.
 define serts::cert (
   Enum['present', 'absent'] $ensure = 'present',
@@ -22,12 +22,17 @@ define serts::cert (
   String $group = 'root',
   Boolean $exclude_filetype = false,
   Boolean $server_hostname = true,
-  Boolean $fullchain_cert = false,
   Stdlib::Filemode $mode = '0444',
   Optional[String] $filename = undef,
+  Optional[Boolean] $fullchain_cert = undef,
   Optional[Stdlib::AbsolutePath] $directory = undef,
 ) {
   require serts
+
+  $real_fullchain_cert = $fullchain_cert ? {
+    undef => $serts::fullchain_cert
+    default => $fullchain_cert
+  }
 
   $source = $fullchain_cert ? {
     true  => "${serts::letsencrypt_directory}/live/${certname}/fullchain.pem",

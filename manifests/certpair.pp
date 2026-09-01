@@ -18,7 +18,7 @@
 #   but if the title does not contain a dot, the system's domain will be appended to it.
 # @param alt_names An array of additional fqdns that should be included. If the fqdn matches
 #   the system's fqdn, additional alt names will be looked up from hiera.
-# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+# @param fullchain_cert Whether to use the fullchain.pem file from Certbot instead of cert.pem. Defaults to false.
 # @param ignore_autopair_warning Whether to ignore a warning if a Serts::Autopair resource is already defined for this fqdn.
 # @param certname The name of the letsencrypt certpair to use. By default, this is the same as the fqdn.
 # @param include_chain Whether to include the CA trust chain in a default location; the cert_directory as ca_bundle.pem.
@@ -39,7 +39,6 @@ define serts::certpair (
   String $owner = 'root',
   String $group = 'root',
   String $fqdn = ($title =~ /[.]/) ? { true => $title, false => "${title}.${facts['networking']['domain']}" },
-  Boolean $fullchain_cert = false,
   Array[Stdlib::Host] $alt_names = [],
   Boolean $exclude_filetype = false,
   Boolean $server_hostname = true,
@@ -49,12 +48,18 @@ define serts::certpair (
   Optional[String] $key_filename = undef,
   Optional[Stdlib::AbsolutePath] $cert_directory = undef,
   Optional[Stdlib::AbsolutePath] $key_directory = undef,
+  Optional[Boolean] $fullchain_cert = undef,
   Boolean $ignore_autopair_warning = false,
   Boolean $include_chain = false,
   String $certname = $fqdn,
   Hash $renewal_options = {},
 ) {
   require serts
+
+  $real_fullchain_cert = $fullchain_cert ? {
+    undef => $serts::fullchain_cert
+    default => $fullchain_cert
+  }
 
   # Determine real directories
 
@@ -91,7 +96,7 @@ define serts::certpair (
     server_hostname  => $server_hostname,
     mode             => $cert_mode,
     fqdn             => $fqdn,
-    fullchain_cert   => $fullchain_cert,
+    fullchain_cert   => $real_fullchain_cert,
   }
   serts::key { $title:
     ensure           => $ensure,
@@ -105,7 +110,7 @@ define serts::certpair (
     mode             => $key_mode,
   }
 
-  if $include_chain and ! $fullchain_cert {
+  if $include_chain and ! $real_fullchain_cert {
     serts::chain { 'ca_bundle.pem':
       ensure    => $ensure,
       filename  => 'ca_bundle.pem',

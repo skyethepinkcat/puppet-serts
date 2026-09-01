@@ -8,6 +8,7 @@
 # @param letsencrypt_directory The directory where letsencrypt stores its data. Defaults to /etc/letsencrypt.
 # @param default_renewal_settings Default settings for renewal configurations.
 # @param letsencrypt_config Extra configuration for the letsencrypt class.
+# @param fullchain_cert Whether to default to using a fullchain certificate.
 class serts (
   Array[Stdlib::Host] $alt_names = [],
   Hash $certbot_config = {},
@@ -25,6 +26,7 @@ class serts (
   Enum['suppress', 'log', 'none'] $cron_output = 'none',
   Hash $default_renewal_settings = {},
   Hash $letsencrypt_config = {},
+  Boolean $fullchain_cert = false,
 ) {
   # Enforce ordering of resources.
   Serts::Autopair <| |> ~> Serts::Cert <| |>

@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v0.2.0](https://github.com/skyethepinkcat/puppet-serts/tree/v0.2.0) (2026-08-24)
-
 [Full Changelog](https://github.com/skyethepinkcat/puppet-serts/compare/v0.1.3...v0.2.0)
 
 **Merged pull requests:**
