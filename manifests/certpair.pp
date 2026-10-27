@@ -57,7 +57,7 @@ define serts::certpair (
   require serts
 
   $real_fullchain_cert = $fullchain_cert ? {
-    undef => $serts::fullchain_cert
+    undef => $serts::fullchain_cert,
     default => $fullchain_cert
   }
 

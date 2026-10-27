@@ -7,7 +7,7 @@
   };
 
   inputs = {
-    nixpkgs.url = "nixpkgs";
+    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst";
     ruby-nix.url = "github:inscapist/ruby-nix";
     flake-parts.url = "github:hercules-ci/flake-parts";
     treefmt-nix = {
@@ -93,7 +93,7 @@
           };
 
           # See available versions here: https://github.com/bobvanderlinden/nixpkgs-ruby/blob/master/ruby/versions.json
-          ruby = pkgs."ruby-3.2.9";
+          ruby = pkgs.ruby_3_3;
 
           # Running bundix would regenerate `gemset.nix`
           bundixcli = bundix.packages.${system}.default;
