@@ -3,4 +3,4 @@
 *.pp eol=lf
 *.sh eol=lf
 *.epp eol=lf
-gemset.nix -linguist-detectable
+gemset.nix linguist-generated
