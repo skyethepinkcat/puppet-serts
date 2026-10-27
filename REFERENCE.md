@@ -36,6 +36,7 @@ The following parameters are available in the `serts` class:
 * [`letsencrypt_directory`](#-serts--letsencrypt_directory)
 * [`default_renewal_settings`](#-serts--default_renewal_settings)
 * [`letsencrypt_config`](#-serts--letsencrypt_config)
+* [`fullchain_cert`](#-serts--fullchain_cert)
 * [`link_directories`](#-serts--link_directories)
 * [`cert_directory_owner`](#-serts--cert_directory_owner)
 * [`cert_directory_group`](#-serts--cert_directory_group)
@@ -109,6 +110,14 @@ Data type: `Hash`
 Extra configuration for the letsencrypt class.
 
 Default value: `{}`
+
+##### <a name="-serts--fullchain_cert"></a>`fullchain_cert`
+
+Data type: `Boolean`
+
+Whether to default to using a fullchain certificate.
+
+Default value: `false`
 
 ##### <a name="-serts--link_directories"></a>`link_directories`
 
@@ -441,11 +450,11 @@ Default value: `($title =~ /[.]/) ? { true => $title, false => "${title}.${facts
 
 ##### <a name="-serts--cert--fullchain_cert"></a>`fullchain_cert`
 
-Data type: `Boolean`
+Data type: `Optional[Boolean]`
 
-Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+Whether to use the fullchain.pem file from Certbot instead of cert.pem. Defaults to false.
 
-Default value: `false`
+Default value: `undef`
 
 ##### <a name="-serts--cert--certname"></a>`certname`
 
@@ -615,11 +624,11 @@ Default value: `[]`
 
 ##### <a name="-serts--certpair--fullchain_cert"></a>`fullchain_cert`
 
-Data type: `Boolean`
+Data type: `Optional[Boolean]`
 
-Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+Whether to use the fullchain.pem file from Certbot instead of cert.pem. Defaults to false.
 
-Default value: `false`
+Default value: `undef`
 
 ##### <a name="-serts--certpair--ignore_autopair_warning"></a>`ignore_autopair_warning`
 
@@ -912,7 +921,7 @@ Default value: `($title =~ /[.]/) ? { true => $title, false => "${title}.${facts
 
 Data type: `Boolean`
 
-Whether to use the fullchain.pem file from Certbot instead of cert.pem.
+Whether to use the fullchain.pem file from Certbot instead of cert.pem. Defaults to false.
 
 Default value: `false`
 
@@ -972,4 +981,3 @@ $exclude_filetype ? {
     true    => "${fqdn}.keychain",
     default => "${fqdn}.keychain.pem"
 ```
-
