@@ -34,7 +34,7 @@ define serts::cert (
     default => $fullchain_cert
   }
 
-  $source = $fullchain_cert ? {
+  $source = $real_fullchain_cert ? {
     true  => "${serts::letsencrypt_directory}/live/${certname}/fullchain.pem",
     false => "${serts::letsencrypt_directory}/live/${certname}/cert.pem",
   }
